@@ -1,0 +1,18 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: Icône Nouveau
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _RV5AcBEdEeqE8Mf0bEbk0A
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 11/27/19, 2:53 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-button "Nouveau (Ctrl+N)" | click
+get-window Nouveau | get-editbox -after [get-label "Assistants :"] | set-text ""
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

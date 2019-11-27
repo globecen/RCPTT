@@ -1,0 +1,33 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: ImportaterDeBasedeConnaissancesDepuisUnprojetARM
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _0_bTcBEXEeqE8Mf0bEbk0A
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 11/27/19, 2:16 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-button Importer | click
+with [get-window Importer] {
+    get-tree | select "Bases de connaissances depuis un fichier projet ou bibliothèque"
+    get-button "Suivant >" | click
+}
+set-dialog-result File "C:\\Users\\i190281\\arm-workspace-1.1.0\\BIOTECH - 2019-11-27 140939\\BIOTECH.arm"
+with [get-window "Bases de connaissances"] {
+    get-button "Parcourir..." | click
+    get-button "Suivant >" | click
+    get-section "Bases de connaissances" | get-tree | select "Actions élémentaires" | get-item -path "Biens supports" 
+        | check
+    get-button Terminer | click
+    with [get-window "Objets nécessaires ajoutés"] {
+        get-table | select "Natures de valeurs métier"
+        get-button OK | click
+    }
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

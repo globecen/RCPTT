@@ -1,0 +1,23 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: ChoixDuDépotDistant
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _CgzGYBEbEeqE8Mf0bEbk0A
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 11/27/19, 2:40 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view Projets | get-tree | get-menu -path "Ajouter un dépôt" | click
+with [get-window "Nouveau dépôt"] {
+    get-button "Se connecter à un dépôt distant existant" | click
+    get-button "Suivant >" | click
+    get-editbox -after [get-label "Nom du dépôt :"] | set-text test
+    get-button Terminer | click
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
