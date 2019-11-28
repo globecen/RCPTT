@@ -6,7 +6,7 @@ Element-Version: 3.0
 External-Reference: 
 Id: _Fw0TYBEgEeqE8Mf0bEbk0A
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 11/27/19, 3:17 PM
+Save-Time: 11/28/19, 9:41 AM
 Testcase-Type: ecl
 
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
@@ -15,7 +15,8 @@ Entry-Name: .content
 
 get-button "Nouveau (Ctrl+N)" | click
 with [get-window Nouveau] {
-    get-tree | select "Exemples/Mairie \\(Français\\)"
-    get-button Terminer | click
+    get-tree | select "Exemples/BIOTECH \\(Français\\)"
+    get-button "Suivant >" | click
 }
+get-window "Nouvel exemple" | get-button Terminer | click
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
