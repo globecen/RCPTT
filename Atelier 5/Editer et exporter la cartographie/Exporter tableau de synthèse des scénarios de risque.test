@@ -1,0 +1,33 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: Exporter tableau de synthèse des scénarios de risque
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _TtMAQBEjEeqWIN447tpoZA
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 11/27/19, 3:37 PM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+L'utilisateur peut exporter le tableau de synthèse des scénarios de risque.
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "5 - Traitement du risque" | get-section "Préparer la cartographie du risque" | get-table | get-cell 0 0 
+    | mouse down -count 1
+get-view "5 - Traitement du risque" | get-section "Préparer la cartographie du risque" | get-table 
+    | select "Échelle de niveau de risque"
+get-view "5 - Traitement du risque" | get-section "Préparer la cartographie du risque" | get-table | get-cell 0 0 
+    | mouse up -count 1
+get-editor "Échelle de niveau de risque" | get-section "Niveaux de l'échelle de risque" 
+    | get-button "Exporter le tableau et l'ajouter au projet" | click
+get-button "Afficher la liste" | click
+get-window -from "AbstractTableInformationControl.<init>()" | get-table | select Documentation
+get-view Documentation | get-tree | select "Atelier5/Échelle de niveau de risque.xls" | double-click
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

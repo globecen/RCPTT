@@ -1,0 +1,30 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: Catégorie
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _nHIMQBEqEeqWIN447tpoZA
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 11/27/19, 4:30 PM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+L'utilisateur peut associer une catégorie (gouvernance, protection, défense, résilience : cf. fiche méthode n°9 : structurer les mesures de traitement du risque) à chaque mesure de sécurité.
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "5 - Traitement du risque" | get-section "Plan d'amélioration continue de la sécurité" 
+    | get-button "Afficher le PACS" | click
+get-editor PACS | get-section "Plan d'amélioration continue de la sécurité" | get-canvas | double-click
+with [get-window Type] {
+    get-section "Élément(s) disponible(s)" | get-tree | select "Types de mesure de sécurité/Protection"
+    get-button -index 2 | click
+    get-button OK | click
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

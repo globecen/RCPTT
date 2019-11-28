@@ -1,0 +1,33 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: Exporter la cartographie du risque initial
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _qR8cEBEiEeqWIN447tpoZA
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 11/27/19, 3:33 PM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+L'utilisateur peut exporter la cartographie du risque initial.
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "5 - Traitement du risque" | get-section "Préparer la cartographie du risque" | get-table | get-cell 1 0 
+    | mouse down -count 1
+get-view "5 - Traitement du risque" | get-section "Préparer la cartographie du risque" | get-table 
+    | select "Matrice de niveau de risque"
+get-view "5 - Traitement du risque" | get-section "Préparer la cartographie du risque" | get-table | get-cell 1 0 
+    | mouse up -count 1
+get-editor "Matrice de niveau de risque" | get-section "Matrice de niveau de risque" 
+    | get-button "Exporter le diagramme et l'ajouter au projet" | click
+get-button "Afficher la liste" | click
+get-window -from "AbstractTableInformationControl.<init>()" | get-table | select Documentation
+get-view Documentation | get-tree | select "Atelier5/Matrice de niveau de risque.png" | double-click
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

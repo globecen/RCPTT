@@ -1,0 +1,17 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: Élément concerné
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _7XSSwBEqEeqWIN447tpoZA
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 11/27/19, 4:51 PM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+L'utilisateur peut choisir un élément (valeur métier, bien support, partie prenante d’écosystème) a associer à chaque mesure de sécurité .
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
