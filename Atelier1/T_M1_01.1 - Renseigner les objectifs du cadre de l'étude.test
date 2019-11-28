@@ -1,0 +1,51 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: T_M1_01.1 - Renseigner les objectifs du cadre de l'étude
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _W9_f4BG2Eeq1JdnKnwNugA
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 11/28/19, 9:09 AM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+with [get-view Projets] {
+    click
+    get-tree | select "Dépôt local/BIOTECH" | double-click
+}
+get-view "1 - Cadrage et socle de sécurité" | get-section "Définir les objectifs et le cadre temporel de l'étude" 
+    | get-button "Définir les objectifs et le cadre temporel" | click
+with [get-editor "Objectifs et cadre temporel de l'étude"] {
+    with [get-section "Objet de l'étude" | get-editbox] {
+        click-text "4:36"
+        key-type Enter
+        set-text "SOCIÉTÉ DE BIOTECHNOLOGIE FABRIQUANT DES VACCINS\n"
+            + "Estimation d’un niveau de maturité faible en matière de sécurité du numérique\n"
+            + "Sensibilisation basique à la sécurité du numérique à la prise de poste des salariés\n"
+            + "Existence d’une charte informatique\n"
+        key-type Enter
+        set-text "SOCIÉTÉ DE BIOTECHNOLOGIE FABRIQUANT DES VACCINS\n"
+            + "Estimation d’un niveau de maturité faible en matière de sécurité du numérique\n"
+            + "Sensibilisation basique à la sécurité du numérique à la prise de poste des salariés\n"
+            + "Existence d’une charte informatique\n"
+            + "le but de ce projet est de fabriquer des vaccins"
+        key-type Enter
+        set-text "SOCIÉTÉ DE BIOTECHNOLOGIE FABRIQUANT DES VACCINS\n"
+            + "Estimation d’un niveau de maturité faible en matière de sécurité du numérique\n"
+            + "Sensibilisation basique à la sécurité du numérique à la prise de poste des salariés\n"
+            + "Existence d’une charte informatique\n"
+            + "le but de ce projet est de fabriquer des vaccins\n"
+        key-type Enter
+        set-text "SOCIÉTÉ DE BIOTECHNOLOGIE FABRIQUANT DES VACCINS\n"
+            + "Estimation d’un niveau de maturité faible en matière de sécurité du numérique\n"
+            + "Sensibilisation basique à la sécurité du numérique à la prise de poste des salariés\n"
+            + "Existence d’une charte informatique\n"
+            + "le but de ce projet est de fabriquer des vaccins"
+    }
+    get-section "Objectifs de l'étude" | get-editbox | click-text "1:1"
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
