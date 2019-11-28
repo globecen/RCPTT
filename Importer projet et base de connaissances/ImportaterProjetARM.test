@@ -6,7 +6,7 @@ Element-Version: 3.0
 External-Reference: 
 Id: _ZVb0QBD5EeqE8Mf0bEbk0A
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 11/27/19, 2:23 PM
+Save-Time: 11/28/19, 10:40 AM
 Testcase-Type: ecl
 
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
@@ -15,14 +15,14 @@ Entry-Name: .content
 
 get-button Importer | click
 with [get-window Importer] {
-    get-tree | select "Projets Agile Risk Manager"
+    get-tree | select "Projets Agile Risk Manager" | key-type "" "\\u0000"
     get-button "Suivant >" | click
 }
-set-dialog-result Folder "C:\\Users\\i190281\\arm-workspace-1.1.0\\BIOTECH1"
+set-dialog-result Folder "C:\\ProjetARM\\BIOTECH TEST"
 with [get-window Import] {
     with [get-group "Type d'import"] {
         get-button "Parcourir..." | click
-        get-table | get-item -path "BIOTECH \\[1.0.0\\] " | check
+        get-table | get-item -path "BIOTECH \\[1.2.0\\] " | check
     }
     get-button Terminer | click
 }
