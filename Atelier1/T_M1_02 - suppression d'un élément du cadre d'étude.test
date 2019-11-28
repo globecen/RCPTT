@@ -1,0 +1,30 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: T_M1_02 - suppression d'un élément du cadre d'étude
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _lFYWsBHJEeq1JdnKnwNugA
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 11/28/19, 11:42 AM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+with [get-editor "Planning des ateliers"] {
+    with [get-section "Identification des participants aux ateliers"] {
+        get-button "Ajouter un participant à l'étude" | click
+        get-canvas | double-click
+        get-editbox | set-text biologiste
+    }
+    with [get-section "Planning des ateliers de l'étude"] {
+        get-button "Planifier une activité" | click
+        get-canvas | double-click
+        get-editbox | set-focus
+    }
+    get-section "Identification des participants aux ateliers" | get-button "Supprimer l'élément sélectionné" | click
+    get-section "Planning des ateliers de l'étude" | get-button "Supprimer l'élément sélectionné" | click
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
