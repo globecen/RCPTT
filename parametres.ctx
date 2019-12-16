@@ -1,0 +1,18 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Context-Type: org.eclipse.rcptt.ctx.parameters
+Element-Name: parametres
+Element-Type: context
+Element-Version: 2.0
+Id: _wgWyYCAFEeqNzuzastf2sA
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/16/19, 2:18 PM
+
+------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee
+Content-Type: text/properties
+Entry-Name: .parameters.context
+
+#Mon Dec 16 14:18:34 CET 2019
+depot=D\u00E9p\u00F4t local/BIOTECH
+
+------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee--

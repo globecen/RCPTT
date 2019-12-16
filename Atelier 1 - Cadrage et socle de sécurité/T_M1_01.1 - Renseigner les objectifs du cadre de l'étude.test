@@ -5,53 +5,28 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _b7TcgBG4Eeq1JdnKnwNugA
+Property-ObjectifsEtude: La méthode est illustrée à l’aide d’un exemple mettant en scène une entreprise fictive, à savoir une société de biotechnologie fabriquant des vaccins. Cet exemple se veut réaliste dans l’objectif de fournir au lecteur une illustration concrète et pédagogique de la méthode.
+Property-ObjetEtude: Sensibilation basique à la sécurité du numérique à la prise de poste des salariés.
+Property-depot: Dépôt local/BIOTECH
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 11/29/19, 10:18 AM
+Save-Time: 12/16/19, 11:29 AM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
 Content-Type: text/plain
 Entry-Name: .description
 
-Vérifier que l'utilisateur puisse choisir les objectifs du cadre de l'étude
+Vérifier que l'utilisateur peut choisir les objectifs du cadre de l'étude
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
 Content-Type: text/ecl
 Entry-Name: .content
 
-with [get-view Projets] {
-    click
-    get-tree | select "Dépôt local/BIOTECH" | double-click
-}
+get-view Projets | get-tree | select $depot| double-click
 get-view "1 - Cadrage et socle de sécurité" | get-section "Définir les objectifs et le cadre temporel de l'étude" 
     | get-button "Définir les objectifs et le cadre temporel" | click
 with [get-editor "Objectifs et cadre temporel de l'étude"] {
-    with [get-section "Objet de l'étude" | get-editbox] {
-        click-text "4:36"
-        key-type Enter
-        set-text "SOCIÉTÉ DE BIOTECHNOLOGIE FABRIQUANT DES VACCINS\n"
-            + "Estimation d’un niveau de maturité faible en matière de sécurité du numérique\n"
-            + "Sensibilisation basique à la sécurité du numérique à la prise de poste des salariés\n"
-            + "Existence d’une charte informatique\n"
-        key-type Enter
-        set-text "SOCIÉTÉ DE BIOTECHNOLOGIE FABRIQUANT DES VACCINS\n"
-            + "Estimation d’un niveau de maturité faible en matière de sécurité du numérique\n"
-            + "Sensibilisation basique à la sécurité du numérique à la prise de poste des salariés\n"
-            + "Existence d’une charte informatique\n"
-            + "le but de ce projet est de fabriquer des vaccins"
-        key-type Enter
-        set-text "SOCIÉTÉ DE BIOTECHNOLOGIE FABRIQUANT DES VACCINS\n"
-            + "Estimation d’un niveau de maturité faible en matière de sécurité du numérique\n"
-            + "Sensibilisation basique à la sécurité du numérique à la prise de poste des salariés\n"
-            + "Existence d’une charte informatique\n"
-            + "le but de ce projet est de fabriquer des vaccins\n"
-        key-type Enter
-        set-text "SOCIÉTÉ DE BIOTECHNOLOGIE FABRIQUANT DES VACCINS\n"
-            + "Estimation d’un niveau de maturité faible en matière de sécurité du numérique\n"
-            + "Sensibilisation basique à la sécurité du numérique à la prise de poste des salariés\n"
-            + "Existence d’une charte informatique\n"
-            + "le but de ce projet est de fabriquer des vaccins"
-    }
-    get-section "Objectifs de l'étude" | get-editbox | click-text "1:1"
+    get-section "Objet de l'étude" | get-editbox | set-text $ObjetEtude
+    get-section "Objectifs de l'étude" | get-editbox | set-text $ObjectifsEtude
 }
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
