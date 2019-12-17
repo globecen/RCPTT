@@ -8,8 +8,11 @@ External-Reference:
 Id: _QaWEUBHEEeq1JdnKnwNugA
 Property-CycleOperationnel: 2 ans
 Property-CycleStrategique: 5 ans
+Property-lb_cycleOperationnel: Durée des cycles opérationnels :
+Property-lb_cycleStrategique: Durée des cycles stratégiques :
+Property-sect_CadreTemporel: Cadre temporel de l'étude
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/16/19, 2:15 PM
+Save-Time: 12/17/19, 9:35 AM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -23,13 +26,13 @@ Content-Type: text/ecl
 Entry-Name: .content
 
 get-view Projets | get-tree | select $depot | double-click
-get-view "1 - Cadrage et socle de sécurité" | get-section "Définir les objectifs et le cadre temporel de l'étude" 
-    | get-button "Définir les objectifs et le cadre temporel" | click
-with [get-editor "Objectifs et cadre temporel de l'étude" | get-section "Cadre temporel de l'étude"] {
-    with [get-editbox -after [get-label "Durée des cycles stratégiques :"]] {
+get-view $atelier1 | get-section $men_OngletCadreEtude
+    | get-button $btn_CadreEtude | click
+with [get-editor $wnd_ObjectifEtude | get-section $sect_CadreTemporel] {
+    with [get-editbox -after [get-label $lb_cycleStrategique]] {
         set-text $CycleStrategique
     }
-    with [get-editbox -after [get-label "Durée des cycles opérationnels :"]] {
+    with [get-editbox -after [get-label $lb_cycleOperationnel]] {
         set-text $CycleOperationnel
     }
 }

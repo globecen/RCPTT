@@ -1,5 +1,6 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
+Contexts: _wgWyYCAFEeqNzuzastf2sA
 Element-Name: T_M1_01.1 - Renseigner les objectifs du cadre de l'étude
 Element-Type: testcase
 Element-Version: 3.0
@@ -7,9 +8,10 @@ External-Reference:
 Id: _b7TcgBG4Eeq1JdnKnwNugA
 Property-ObjectifsEtude: La méthode est illustrée à l’aide d’un exemple mettant en scène une entreprise fictive, à savoir une société de biotechnologie fabriquant des vaccins. Cet exemple se veut réaliste dans l’objectif de fournir au lecteur une illustration concrète et pédagogique de la méthode.
 Property-ObjetEtude: Sensibilation basique à la sécurité du numérique à la prise de poste des salariés.
-Property-depot: Dépôt local/BIOTECH
+Property-edt_ObjectifEtude: Objectifs de l'étude
+Property-edt_ObjetEtude: Objet de l'étude
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/16/19, 11:29 AM
+Save-Time: 12/17/19, 9:21 AM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -23,10 +25,10 @@ Content-Type: text/ecl
 Entry-Name: .content
 
 get-view Projets | get-tree | select $depot| double-click
-get-view "1 - Cadrage et socle de sécurité" | get-section "Définir les objectifs et le cadre temporel de l'étude" 
-    | get-button "Définir les objectifs et le cadre temporel" | click
-with [get-editor "Objectifs et cadre temporel de l'étude"] {
-    get-section "Objet de l'étude" | get-editbox | set-text $ObjetEtude
-    get-section "Objectifs de l'étude" | get-editbox | set-text $ObjectifsEtude
+get-view $atelier1 | get-section $men_OngletCadreEtude
+    | get-button $btn_CadreEtude | click
+with [get-editor $wnd_ObjectifEtude] {
+    get-section $edt_ObjetEtude | get-editbox | set-text $ObjetEtude
+    get-section $edt_ObjectifEtude | get-editbox | set-text $ObjectifsEtude
 }
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

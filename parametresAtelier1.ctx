@@ -1,0 +1,30 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Context-Type: org.eclipse.rcptt.ctx.parameters
+Element-Name: parametresAtelier1
+Element-Type: context
+Element-Version: 2.0
+Id: _wgWyYCAFEeqNzuzastf2sA
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/17/19, 11:39 AM
+
+------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee
+Content-Type: text/properties
+Entry-Name: .parameters.context
+
+#Tue Dec 17 11:39:10 CET 2019
+wnd_PlanifierAtelier=Planning des ateliers
+depot=D\u00E9p\u00F4t local/BIOTECH
+btn_PlanifierAtelier=Planifier les ateliers
+btn_CadreEtude=D\u00E9finir les objectifs et le cadre temporel
+tab_IdentifiParticipant=Identification des participants aux ateliers
+atelier1=1 - Cadrage et socle de s\u00E9curit\u00E9
+men_PlanifierAtelier=Planifier les ateliers de l'\u00E9tude
+atelier3=3 - Sc\u00E9narios strat\u00E9giques
+men_OngletCadreEtude=D\u00E9finir les objectifs et le cadre temporel de l'\u00E9tude
+atelier2=2 - Sources de risque
+wnd_ObjectifEtude=Objectifs et cadre temporel de l'\u00E9tude
+atelier5=5 - Traitement du risque
+atelier4=4 - Sc\u00E9narios op\u00E9rationnels
+
+------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee--

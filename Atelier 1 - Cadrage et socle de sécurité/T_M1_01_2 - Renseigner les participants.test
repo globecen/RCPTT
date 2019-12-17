@@ -1,14 +1,15 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
+Contexts: _wgWyYCAFEeqNzuzastf2sA
 Element-Name: T_M1_01.2 - Renseigner les participants
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _eDTDwBG4Eeq1JdnKnwNugA
-Property-depot: Dépôt local/BIOTECH
+Property-btn_AjoutParticipant: Ajouter un participant à l'étude
 Property-participant: biologiste
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/16/19, 11:02 AM
+Save-Time: 12/17/19, 10:16 AM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -21,15 +22,19 @@ Vérifier que l'utilisateur puisse choisir les participants
 Content-Type: text/ecl
 Entry-Name: .content
 
-get-view Projets | get-tree | select $depot | double-click
-get-view "1 - Cadrage et socle de sécurité" | get-section "Planifier les ateliers de l'étude" 
-    | get-button "Planifier les ateliers" | click
-with [get-editor "Planning des ateliers" | get-section "Identification des participants aux ateliers"] {
-    get-button "Ajouter un participant à l'étude" | click
-    get-canvas | double-click
+get-view $atelier1 | get-section $men_PlanifierAtelier 
+    | get-button $btn_PlanifierAtelier | click
+get-view $atelier1 | get-section $men_PlanifierAtelier 
+    | get-button $btn_PlanifierAtelier | key-type "TRAVERSE_TAB_NEXT"
+with [get-editor $wnd_PlanifierAtelier | get-section $tab_IdentifiParticipant] {
+    get-button $btn_AjoutParticipant | click
+    with [get-canvas] {
+        key-type Right
+        key-type Left
+        key-type F2
+    }
     with [get-editbox] {
         set-text $participant
-        key-type Enter
     }
 }
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

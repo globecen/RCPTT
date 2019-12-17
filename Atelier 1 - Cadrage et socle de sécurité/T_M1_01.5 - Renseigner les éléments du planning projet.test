@@ -1,12 +1,20 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
+Contexts: _wgWyYCAFEeqNzuzastf2sA
 Element-Name: T_M1_01.5 - Renseigner les éléments du planning projet
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _b-9hkBHFEeq1JdnKnwNugA
+Property-btn_PlanifierActivite: Planifier une activité
+Property-dateAtelier1: 17 décembre 2019 11:22
+Property-dateAtelier2: 5 janvier 2020 11:23
+Property-dateAtelier3: 20 janvier 2020 09:23
+Property-dateAtelier4: 15 février 2020 09:23
+Property-dateAtelier5: 20 mars 2020 08:23
+Property-tab_PlannnigAtelier: Planning des ateliers de l'étude
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/16/19, 11:32 AM
+Save-Time: 12/17/19, 1:59 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -19,14 +27,99 @@ Vérifier que l'utilisteur puisse remplir les éléments du planning projet
 Content-Type: text/ecl
 Entry-Name: .content
 
-get-view "1 - Cadrage et socle de sécurité" | get-section "Planifier les ateliers de l'étude" 
-    | get-button "Planifier les ateliers" | click
-with [get-editor "Planning des ateliers" | get-section "Planning des ateliers de l'étude"] {
-    with [get-button "Planifier une activité"] {
-        click
-        click
-    }
-    get-canvas | double-click
+get-view $atelier1 | get-section $men_PlanifierAtelier
+    | get-button $btn_PlanifierAtelier | click
+with [get-editor $wnd_PlanifierAtelier | get-section $tab_PlannnigAtelier
+    | get-button $btn_PlanifierActivite] {
+    click
+    click
+    click
+    click
+    click
 }
-get-window -from "NatCombo.createDropdownControl()" | get-table | get-cell 1 0 | click
+get-view $atelier1 | get-section $men_PlanifierAtelier 
+    | get-button $btn_PlanifierAtelier | key-type "TRAVERSE_ARROW_PREVIOUS"
+get-view $atelier1 | get-section $men_PlanifierAtelier 
+    | get-button $btn_PlanifierAtelier | key-type Up
+with [get-editor $wnd_PlanifierAtelier | get-section $tab_PlannnigAtelier | get-canvas] {
+    key-type Up -times 3
+    key-type F2
+}
+with [get-window -from "NatCombo.createDropdownControl()" | get-table] {
+    key-type Down
+    select $atelier2 | key-type Enter
+}
+with [get-editor $wnd_PlanifierAtelier | get-section $tab_PlannnigAtelier | get-canvas] {
+    key-type Down
+    key-type F2
+}
+with [get-window -from "NatCombo.createDropdownControl()" | get-table] {
+    key-type Down
+    select $atelier2 | key-type Down
+    select $atelier3 | key-type Enter
+}
+with [get-editor $wnd_PlanifierAtelier | get-section $tab_PlannnigAtelier | get-canvas] {
+    key-type Down
+    key-type F2
+}
+with [get-window -from "NatCombo.createDropdownControl()" | get-table] {
+    key-type Down
+    select $atelier2 | key-type Down
+    select $atelier3 | key-type Down
+    select $atelier4 | key-type Enter
+}
+with [get-editor $wnd_PlanifierAtelier | get-section $tab_PlannnigAtelier | get-canvas] {
+    key-type Down
+    key-type F2
+}
+with [get-window -from "NatCombo.createDropdownControl()" | get-table] {
+    key-type Down
+    select $atelier2 | key-type Down
+    select $atelier3 | key-type Down
+    select $atelier4 | key-type Down
+    select $atelier5 | key-type Enter
+}
+with [get-editor $wnd_PlanifierAtelier | get-section $tab_PlannnigAtelier] {
+    with [get-canvas] {
+        key-type Right
+        key-type Up -times 4
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $dateAtelier1
+        key-type Enter
+    }
+    with [get-canvas] {
+        key-type Down
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $dateAtelier2
+        key-type Enter
+    }
+    with [get-canvas] {
+        key-type Down
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $dateAtelier3
+        key-type Enter
+    }
+    with [get-canvas] {
+        key-type Down
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $dateAtelier4
+        key-type Enter
+    }
+    with [get-canvas] {
+        key-type Down
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $dateAtelier5
+        key-type Enter
+    }
+}
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
