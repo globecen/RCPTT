@@ -1,18 +1,18 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
 Context-Type: org.eclipse.rcptt.ctx.parameters
-Element-Name: Paramètres 1
+Element-Name: Parametres 1
 Element-Type: context
 Element-Version: 2.0
 Id: _V5w78CDOEeqBWeuHxtTlfw
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/17/19, 4:35 PM
+Save-Time: 12/17/19, 4:55 PM
 
 ------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee
 Content-Type: text/properties
 Entry-Name: .parameters.context
 
-#Tue Dec 17 16:35:33 CET 2019
+#Tue Dec 17 16:55:21 CET 2019
 btn_CreerNouveauDepotLocal=Cr\u00E9er un nouveau d\u00E9p\u00F4t local
 lb_NomDepot=Nom du d\u00E9p\u00F4t \:
 wnd_NouveauDepot=Nouveau d\u00E9p\u00F4t
