@@ -5,16 +5,16 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _aFgb8BEdEeqE8Mf0bEbk0A
+Property-dp_Select: Dépôt local
+Property-key_Type: "" "\\u0000"
+Property-men_NouveauProjet: Nouveau projet
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 11/27/19, 2:54 PM
+Save-Time: 12/17/19, 9:43 AM
 Testcase-Type: ecl
 
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
 Content-Type: text/ecl
 Entry-Name: .content
 
-with [get-view Projets | get-tree] {
-    key-type "" "\\u0000"
-    select "Dépôt local" | get-menu -path "Nouveau projet" | click
-}
+get-view Projets | get-tree | select "Dépôt local/test" | get-menu -path "Nouveau projet" | click
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

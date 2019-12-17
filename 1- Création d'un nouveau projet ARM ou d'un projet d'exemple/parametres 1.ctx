@@ -1,0 +1,25 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Context-Type: org.eclipse.rcptt.ctx.parameters
+Element-Name: parametres 1
+Element-Type: context
+Element-Version: 2.0
+Id: _V5w78CDOEeqBWeuHxtTlfw
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/17/19, 2:34 PM
+
+------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee
+Content-Type: text/properties
+Entry-Name: .parameters.context
+
+#Tue Dec 17 14:34:00 CET 2019
+btn_NouveauProjet=Nouveau (Ctrl+N)
+men_AjoutDepot=Ajouter un d\u00E9p\u00F4t
+btn_Suivant=Suivant >
+btn_CreerNouveauDepotLocal=Cr\u00E9er un nouveau d\u00E9p\u00F4t local
+btn_Terminer=Terminer
+wnd_NouveauDepot=Nouveau d\u00E9p\u00F4t
+lb_NomDepot=Nom du d\u00E9p\u00F4t \:
+btn_DepotDistant=Se connecter \u00E0 un d\u00E9p\u00F4t distant existant
+
+------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee--
