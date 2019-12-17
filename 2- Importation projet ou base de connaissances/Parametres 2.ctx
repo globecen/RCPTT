@@ -6,15 +6,18 @@ Element-Type: context
 Element-Version: 2.0
 Id: _833qICDgEeqHv_ako5yTPA
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/17/19, 4:55 PM
+Save-Time: 12/17/19, 4:59 PM
 
 ------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee
 Content-Type: text/properties
 Entry-Name: .parameters.context
 
-#Tue Dec 17 16:55:13 CET 2019
+#Tue Dec 17 16:59:46 CET 2019
+lb_ReferentielsDeSecuriteStandard=R\u00E9f\u00E9rentiels de s\u00E9curit\u00E9 standard
 lb_BasesDeConnaissancesDepuisUnFichierProjetOuBibliotheque=Bases de connaissances depuis un fichier projet ou biblioth\u00E8que
 lb_NaturesDeValeursMetier=Natures de valeurs m\u00E9tier
+lb_ReferentielsDeSecurite=R\u00E9f\u00E9rentiels de s\u00E9curit\u00E9
 lb_ObjetsNecessairesAjoutes=Objets n\u00E9cessaires ajout\u00E9s
+lb_TypesDeReferentiel=Types de r\u00E9f\u00E9rentiel
 
 ------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee--
