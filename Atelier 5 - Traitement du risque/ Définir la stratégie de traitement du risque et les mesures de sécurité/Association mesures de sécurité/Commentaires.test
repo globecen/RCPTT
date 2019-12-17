@@ -1,12 +1,13 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
+Contexts: _S9tsgCAIEeqt7akAoeXmaQ
 Element-Name: Commentaires
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _k6KCUBHCEeq9Sbz1456Pnw
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 11/28/19, 10:38 AM
+Save-Time: 12/17/19, 4:33 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -21,11 +22,17 @@ L’ensemble des mesures de sécurité est ainsi formalisé dans un plan d’am�
 Content-Type: text/ecl
 Entry-Name: .content
 
+get-view $lb_Traitement_du_risque
+| get-section $men_plan_amelioration_continue_securite | get-button $btn_afficher_pacs | click
 get-view "5 - Traitement du risque" | get-section "Plan d'amélioration continue de la sécurité" 
-    | get-button "Afficher le PACS" | click
-get-editor PACS | get-section "Plan d'amélioration continue de la sécurité" | get-canvas | double-click
+    | get-button "Afficher le PACS" | key-type "TRAVERSE_TAB_NEXT"
+with [get-editor PACS | get-section "Plan d'amélioration continue de la sécurité" | get-canvas] {
+    key-type Tab
+    key-type Right -times 3
+    key-type F2
+}
 with [get-window "Freins et difficultés de mise en œuvre"] {
-    get-control Browser | get-control Any -index 1 | type-text "Test 1"
+    get-control Browser | get-control Any -index 1 | type-text Test
     get-button OK | click
 }
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
