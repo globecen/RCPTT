@@ -1,0 +1,34 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _833qICDgEeqHv_ako5yTPA
+Element-Name: ImporterDeBasedeConnaissancesDepuisUnprojetARM
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _0_bTcBEXEeqE8Mf0bEbk0A
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/17/19, 4:50 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-button Importer | click
+with [get-window Importer] {
+    get-tree | select $lb_BasesDeConnaissancesDepuisUnFichierProjetOuBibliotheque
+    get-button $btn_Suivant | click
+}
+set-dialog-result File $lb_File
+with [get-window $lb_BasesDeConnaissances] {
+    get-button $btn_Parcourir | click
+    get-button $btn_Suivant | click
+    get-section $lb_BasesDeConnaissances | get-tree | select $lb_ActionsElementaires | get-item -path $lb_BiensSupports 
+        | check
+    get-button Terminer | click
+    with [get-window $lb_ObjetsNecessairesAjoutes] {
+        get-table | select $lb_NaturesDeValeursMetier
+        get-button $btn_Ok | click
+    }
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

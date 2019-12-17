@@ -1,0 +1,25 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Context-Type: org.eclipse.rcptt.ctx.parameters
+Element-Name: Parametres globaux
+Element-Type: context
+Element-Version: 2.0
+Id: _XmoWUCDiEeqHv_ako5yTPA
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/17/19, 4:45 PM
+
+------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee
+Content-Type: text/properties
+Entry-Name: .parameters.context
+
+#Tue Dec 17 16:45:23 CET 2019
+btn_Suivant=Suivant >
+lb_ActionsElementaires=Actions \u00E9l\u00E9mentaires
+lb_BiensSupports=Biens supports
+btn_Terminer=Terminer
+btn_Parcourir=Parcourir...
+lb_File=C\:\\ProjetARM\\BIOTECH TEST\\BIOTECH.arm
+lb_BasesDeConnaissances=Bases de connaissances
+btn_Ok=OK
+
+------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee--
