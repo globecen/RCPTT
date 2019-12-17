@@ -11,7 +11,7 @@ Property-lb_Assistant: Assistants :
 Property-txt_NomProjet:    
 Property-wnd_Nouveau: Nouveau
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/17/19, 2:41 PM
+Save-Time: 12/17/19, 2:46 PM
 Testcase-Type: ecl
 
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
@@ -20,7 +20,7 @@ Entry-Name: .content
 
 get-button $btn_Nouveau | click
 with [get-window Nouveau] {
-    get-tree | select $
-    get-button "Suivant >" | click
+    get-tree | select $lb_ProjetARM
+    get-button $btn_Suivant | click
     }
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

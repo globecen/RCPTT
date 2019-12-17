@@ -1,0 +1,26 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: Parcours 2
+Element-Type: testsuite
+Element-Version: 2.0
+Id: _4maRcCDfEeqHv_ako5yTPA
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/17/19, 4:15 PM
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+L'utilisateur :
+- Créer un dépot local
+- Lance la création d'un projet d'exemple
+- Défini son dépot
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8
+Content-Type: text/testcase
+Entry-Name: testcase-items
+
+_y8qNoBEbEeqE8Mf0bEbk0A	// kind: 'test' name: 'ChoixDuD�potLocal' path: '../1- Cr�ation d'un nouveau projet ARM ou d'un projet d'exemple/D�finir le d�pot/ChoixDuD�potLocal.test'
+_Fw0TYBEgEeqE8Mf0bEbk0A	// kind: 'test' name: 'CreerProjetExemple' path: '../1- Cr�ation d'un nouveau projet ARM ou d'un projet d'exemple/CreerProjetExemple.test'
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8--
