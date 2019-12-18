@@ -1,12 +1,13 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
+Contexts: _S9tsgCAIEeqt7akAoeXmaQ
 Element-Name: Mesures de sécurité
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _BHRw4BEqEeqWIN447tpoZA
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 11/27/19, 4:26 PM
+Save-Time: 12/18/19, 4:10 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -19,10 +20,10 @@ L'utilisateur peut associer aux scénarios de risque des mesures de sécurité. 
 Content-Type: text/ecl
 Entry-Name: .content
 
-get-view "5 - Traitement du risque" | get-section "Préparation des données" | get-table | get-cell 3 0 | mouse down 
+get-view $lb_Traitement_du_risque | get-section $men_Preparation_donnees | get-table | get-cell 3 0 | mouse down 
     -count 1
-get-view "5 - Traitement du risque" | get-section "Préparation des données" | get-table | select Responsables
-get-view "5 - Traitement du risque" | get-section "Préparation des données" | get-table | get-cell 3 0 | mouse up 
+get-view $lb_Traitement_du_risque | get-section $men_Preparation_donnees | get-table | select Responsables
+get-view $lb_Traitement_du_risque | get-section $men_Preparation_donnees | get-table | get-cell 3 0 | mouse up 
     -count 1
 get-editor Responsables | get-section "Contenu de la base de responsables" 
     | get-button "Ajouter un responsable à la base" | click

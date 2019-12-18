@@ -6,13 +6,13 @@ Element-Type: context
 Element-Version: 2.0
 Id: _V5w78CDOEeqBWeuHxtTlfw
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/18/19, 10:55 AM
+Save-Time: 12/18/19, 3:45 PM
 
 ------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee
 Content-Type: text/properties
 Entry-Name: .parameters.context
 
-#Wed Dec 18 10:55:18 CET 2019
+#Wed Dec 18 15:45:39 CET 2019
 btn_CreerNouveauDepotLocal=Cr\u00E9er un nouveau d\u00E9p\u00F4t local
 lb_NomDepot=Nom du d\u00E9p\u00F4t \:
 wnd_NouveauDepot=Nouveau d\u00E9p\u00F4t
@@ -31,7 +31,7 @@ lb_ConduireUneEtudeDeRisqueCompleteEtFineParExempleSurUnProduitDeSecuriteOuEnVue
 lb_OrienterUnAuditDeSecuriteEtNotammentUnTestDIntrusion=Orienter un audit de s\u00E9curit\u00E9 et notamment un test d'intrusion
 lb_ExempleBiotechFr=Exemples/BIOTECH (Fran\u00E7ais)
 lb_BasesAdditionnelles=Bases additionnelles
-btn_NouveauProjet=Nouveau
+btn_NouveauProjet=Nouveau (Ctrl+N)
 lb_DepotCreerProjet=D\u00E9p\u00F4t o\u00F9 cr\u00E9er le projet
 lb_DepotLocal=D\u00E9p\u00F4t local
 lb_EvaluerLeNiveauDeMenaceDeLEcoSystemeVisAVisDeLObjetDelEtude=\u00C9valuer le niveau de menace de l'\u00E9cosyst\u00E8me vis-\u00E0-vis de l'objet de l'\u00E9tude
