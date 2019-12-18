@@ -6,21 +6,34 @@ Element-Type: context
 Element-Version: 2.0
 Id: _XmoWUCDiEeqHv_ako5yTPA
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/18/19, 10:55 AM
+Save-Time: 12/18/19, 4:40 PM
 
 ------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee
 Content-Type: text/properties
 Entry-Name: .parameters.context
 
-#Wed Dec 18 10:55:20 CET 2019
+#Wed Dec 18 16:40:51 CET 2019
+lb_Exporter=Exporter
 btn_Suivant=Suivant >
-lb_ActionsElementaires=Actions \u00E9l\u00E9mentaires
 lb_ProjetARM=Projets Agile Risk Manager
 lb_BiensSupports=Biens supports
+btn_Exporter=Exporter
+lb_CriteresDeSecurite=Crit\u00E8res de s\u00E9curit\u00E9
 btn_Terminer=Terminer
-btn_Parcourir=Parcourir...
-lb_File=C\:\\ProjetARM\\BIOTECH TEST\\BIOTECH.arm
-lb_BasesDeConnaissances=Bases de connaissances
+lb_BasesAdditionnelles=Bases additionnelles
 btn_Ok=OK
+lb_Importer=Importer
+lb_DepotLocal=D\u00E9p\u00F4t local
+lb_ActionsElementaires=Actions \u00E9l\u00E9mentaires
+lb_CategoriesDeBienSupport=Cat\u00E9gories de bien support
+lb_Parcourir=Parcourir...
+btn_Parcourir=Parcourir...
+lb_ObjetsNecessairesAjoutes=Objets n\u00E9cessaires ajout\u00E9s
+lb_LibrairiesStandard=Librairies standard
+lb_CategoriesDActionsElementaires=Cat\u00E9gories d'actions \u00E9l\u00E9mentaires
+lb_File=C\:\\ProjetARM\\
+lb_BasesDeConnaissances=Bases de connaissances
+lb_EBIOSRiskManager=EBIOS Risk Manager
+lb_CyberKillChain=Cyber kill chain
 
 ------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee--

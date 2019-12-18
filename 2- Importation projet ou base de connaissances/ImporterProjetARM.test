@@ -1,12 +1,13 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
+Contexts: _833qICDgEeqHv_ako5yTPA
 Element-Name: ImporterProjetARM
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _ZVb0QBD5EeqE8Mf0bEbk0A
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/18/19, 11:02 AM
+Save-Time: 12/18/19, 3:19 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -19,15 +20,18 @@ Vérifier que l'on peut importer un projet ARM.
 Content-Type: text/ecl
 Entry-Name: .content
 
-get-button Importer | click
-with [get-window Importer] {
-    get-tree | select $lb_ProjetARM | key-type "" "\\u0000"
-    get-button $btn_Suivant | click	
+get-button $lb_Importer | click
+with [get-window $lb_Importer] {
+    get-tree | select $lb_ProjetARM
+    get-button $btn_Suivant | click
 }
-set-dialog-result Folder $lb_File
 with [get-window Import] {
-    with [get-group "Type d'import"] {
-        get-button "Parcourir..." | click
+    get-group $lb_SelectionDuDepot | get-combo -after [get-label $lb_DepotDansLequelImporterLesProjets] 
+        | select $lb_DepotLocal
+    with [get-group $lb_TypeDImport] {
+        with [get-editbox] {
+            set-text $lb_File
+        }
         get-table | get-item -path "BIOTECH \\[1.2.0\\] " | check
     }
     get-button Terminer | click

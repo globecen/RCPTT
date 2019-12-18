@@ -5,7 +5,15 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _UkHoYCCyEeqAcJTGuw2CmA
+Property-lb_MousePress: mouse-press -x 177 -y 73 -button button1
+Property-lb_MouseRelease: mouse-release -x 177 -y 77 -button button1
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/17/19, 10:48 AM
+Save-Time: 12/18/19, 4:16 PM
 Testcase-Type: ecl
 
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
