@@ -7,7 +7,7 @@ Element-Version: 3.0
 External-Reference: 
 Id: _BdwTwBHFEeq9Sbz1456Pnw
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/16/19, 2:47 PM
+Save-Time: 12/18/19, 3:21 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -20,6 +20,11 @@ L'utilisateur peut ajouter une base de responsable.
 Content-Type: text/ecl
 Entry-Name: .content
 
+with [get-view Ateliers | get-canvas | double-click]
+{
+   mouse-press -x 305 -y 45 -button button1
+   mouse-release -x 305 -y 45 -button button1
+}
 get-view $lb_Traitement_du_risque | get-section $men_Preparation_donnees | get-button -index 0 | click
 get-view $lb_Traitement_du_risque | get-section $men_Preparation_donnees | get-menu 
     -path $btn_ajout_base_responsable | click

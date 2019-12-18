@@ -1,12 +1,14 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
+Contexts: _S9tsgCAIEeqt7akAoeXmaQ
 Element-Name: Editer base responsable
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _Ild9UBHFEeq9Sbz1456Pnw
+Property-lb_base_responsable: Base de responsables
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 11/28/19, 10:55 AM
+Save-Time: 12/18/19, 3:06 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -19,13 +21,58 @@ L'utilisateur peut editer/modifier la base de responsable créée.
 Content-Type: text/ecl
 Entry-Name: .content
 
-get-view "5 - Traitement du risque" | get-section "Préparation des données" | get-table | get-cell 3 0 | mouse down 
+with [get-view Ateliers | get-canvas | double-click]
+{
+   mouse-press -x 305 -y 45 -button button1
+   mouse-release -x 305 -y 45 -button button1
+}
+
+get-view $lb_Traitement_du_risque | get-section $men_Preparation_donnees | get-table | get-cell 4 0 | mouse down 
     -count 1
-get-view "5 - Traitement du risque" | get-section "Préparation des données" | get-table | select "Base de responsables"
-get-view "5 - Traitement du risque" | get-section "Préparation des données" | get-table | get-cell 3 0 | mouse up 
+get-view $lb_Traitement_du_risque | get-section $men_Preparation_donnees | get-table | select $lb_base_responsable
+get-view $lb_Traitement_du_risque | get-section $men_Preparation_donneeslb_base_responsable | get-table | get-cell 4 0 | mouse up 
     -count 1
-with [get-editor "Base de responsables" | get-section "Contenu de la base de responsables" | get-editbox] {
-    set-text Name
-    key-type Enter
+with [get-editor $lb_base_responsable | get-section "Contenu de la base de responsables"] {
+    get-button "Ajouter un responsable à la base" | click
+    with [get-canvas] {
+        key-type Right
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text Responsable11
+        key-type Enter
+    }
+    with [get-canvas] {
+        key-type Right
+        key-type F2
+    }
+}
+with [get-window "Valeurs métier"] {
+    with [get-section "Élément(s) disponible(s)"] {
+        get-editbox | set-text "entrer le texte du filtre"
+        get-tree | select "Valeurs métier/Fabriquer des vaccins"
+    }
+    get-button -index 2 | click
+    get-button OK | click
+}
+with [get-editor $lb_base_responsable | get-section "Contenu de la base de responsables" | get-canvas] {
+    key-type Right
+    key-type F2
+}
+with [get-window "Biens supports"] {
+    with [get-section "Élément(s) disponible(s)"] {
+        get-editbox | set-text "entrer le texte du filtre"
+        get-tree | select "Biens supports/Systèmes de production"
+    }
+    get-button -index 2 | click
+    get-button OK | click
+}
+with [get-editor $lb_base_responsable | get-section "Contenu de la base de responsables" | get-canvas] {
+    key-type Right
+    key-type F2
+}
+with [get-window Description] {
+    get-control Browser | get-control Any -index 1 | type-text "COommentaire tresest"
+    get-button OK | click
 }
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

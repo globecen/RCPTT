@@ -1,12 +1,13 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
+Contexts: _S9tsgCAIEeqt7akAoeXmaQ
 Element-Name: Editer base mesure sécurité
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _f2u50BHEEeq9Sbz1456Pnw
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 11/28/19, 10:51 AM
+Save-Time: 12/18/19, 2:55 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -19,14 +20,72 @@ L'utilisateur peut editer/modifier la base de mesure de sécurité créée.
 Content-Type: text/ecl
 Entry-Name: .content
 
-get-view "5 - Traitement du risque" | get-section "Préparation des données" | get-table | get-cell 1 0 | mouse down 
+with [get-view Ateliers | get-canvas | double-click]
+{
+   mouse-press -x 305 -y 45 -button button1
+   mouse-release -x 305 -y 45 -button button1
+}
+ 
+get-view $lb_Traitement_du_risque | get-section $men_Preparation_donnees | get-table | get-cell 1 0 | mouse down 
     -count 1
-get-view "5 - Traitement du risque" | get-section "Préparation des données" | get-table 
+get-view $lb_Traitement_du_risque | get-section $men_Preparation_donnees | get-table 
     | select "Base de mesures de sécurité"
-get-view "5 - Traitement du risque" | get-section "Préparation des données" | get-table | get-cell 1 0 | mouse up 
+get-view $lb_Traitement_du_risque | get-section $men_Preparation_donnees | get-table | get-cell 1 0 | mouse up 
     -count 1
-with [get-editor "Base de mesures de sécurité" | get-section "Mesures de sécurité du référentiel" | get-editbox] {
-    set-text Chat
-    key-type Enter
+with [get-editor "Base de mesures de sécurité" | get-section "Mesures de sécurité du référentiel"] {
+    get-button "Ajouter une mesure de sécurité au référentiel" | click
+    with [get-canvas] {
+        key-type Right
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text Test1
+        key-type Enter
+    }
+    with [get-canvas] {
+        key-type Left
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text 11
+        key-type Enter
+    }
+    with [get-canvas] {
+        key-type Right -times 2
+        key-type F2
+    }
+}
+with [get-window Type] {
+    with [get-section "Élément(s) disponible(s)"] {
+        get-editbox | set-text "entrer le texte du filtre"
+        get-tree | select "Types de mesure de sécurité/Défense"
+    }
+    get-button -index 2 | click
+    get-section "Élément(s) disponible(s)" | get-tree | select "Types de mesure de sécurité/Gouvernance"
+    get-button OK | click
+}
+with [get-editor "Base de mesures de sécurité" | get-section "Mesures de sécurité du référentiel"] {
+    with [get-canvas] {
+        key-type Right
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text "Thème11"
+        key-type Enter
+    }
+    with [get-canvas] {
+        key-type Right
+        key-type F2
+    }
+}
+with [get-window Description] {
+    with [get-control Browser] {
+        key-type CapsLock -display
+        get-control Any -index 1 | type-text T
+        type-text T -display
+        key-type CapsLock -display
+        get-control Any -index 1 | type-text "est commentaire"
+    }
+    get-button OK | click
 }
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
