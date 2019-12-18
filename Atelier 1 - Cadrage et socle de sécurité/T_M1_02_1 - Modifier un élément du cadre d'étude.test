@@ -1,0 +1,51 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _wgWyYCAFEeqNzuzastf2sA
+Element-Name: T_M1_02.1 - Modifier un élément du cadre d'étude
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _U2bGQCDnEeq5RMJhH7vAnw
+Property-edt_ObjectifEtude: Objet de l'étude
+Property-mod_CycleOperationnel: 3 ans
+Property-mod_ObjetEtude: Estimation d’un niveau de maturité faible en matière de sécurité du numérique.
+Property-mod_participant: Service informatique
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/18/19, 11:03 AM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view $atelier1 | get-section $men_OngletCadreEtude 
+    | get-button $btn_CadreEtude | click
+with [get-editor $wnd_ObjectifEtude] {
+    with [get-section $edt_ObjectifEtude | get-editbox] {
+        click-text "1:1" "1:83"
+        key-type Right
+        set-text $mod_ObjetEtude
+    }
+    with [get-section $sect_CadreTemporel | get-editbox -after [get-label $lb_cycleOperationnel]] {
+        set-text $mod_CycleOperationnel
+    }
+}
+get-view $atelier1 | get-section $men_PlanifierAtelier 
+    | get-button $btn_PlanifierAtelier | click
+get-view $atelier1 | get-section $men_PlanifierAtelier
+    | get-button $btn_PlanifierAtelier | key-type "TRAVERSE_TAB_NEXT"
+with [get-editor $wnd_PlanifierAtelier | get-section $tab_IdentifiParticipant] {
+    get-canvas | key-type Tab -times 6
+    get-button "Ajouter un participant à l'étude" | click
+    get-button "Supprimer l'élément sélectionné" | click
+    with [get-canvas] {
+        key-type Tab -times 2
+        key-type Left -times 2
+        key-type Down -times 4
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $mod_participant
+    }
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
