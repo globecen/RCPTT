@@ -13,7 +13,7 @@ Property-participant3: DSI
 Property-participant4: RSSI
 Property-participant5: Architectes fonctionnels
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/17/19, 4:54 PM
+Save-Time: 12/18/19, 1:49 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -26,6 +26,11 @@ Vérifier que l'utilisateur puisse choisir les participants
 Content-Type: text/ecl
 Entry-Name: .content
 
+with [get-view Ateliers | get-canvas | double-click]
+{
+   mouse-press -x 36 -y 52 -button button1
+   mouse-release -x 36 -y 52 -button button1
+}
 get-view $atelier1 | get-section $men_PlanifierAtelier 
     | get-button $btn_PlanifierAtelier | click
 get-view $atelier1 | get-section $men_PlanifierAtelier 

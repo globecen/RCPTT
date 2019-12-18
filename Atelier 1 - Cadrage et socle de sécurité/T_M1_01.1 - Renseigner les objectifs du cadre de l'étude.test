@@ -11,7 +11,7 @@ Property-ObjetEtude: Sensibilation basique à la sécurité du numérique à la 
 Property-edt_ObjectifEtude: Objectifs de l'étude
 Property-edt_ObjetEtude: Objet de l'étude
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/17/19, 9:21 AM
+Save-Time: 12/18/19, 1:47 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -24,7 +24,11 @@ Vérifier que l'utilisateur peut choisir les objectifs du cadre de l'étude
 Content-Type: text/ecl
 Entry-Name: .content
 
-get-view Projets | get-tree | select $depot| double-click
+with [get-view Ateliers | get-canvas | double-click]
+{
+   mouse-press -x 36 -y 52 -button button1
+   mouse-release -x 36 -y 52 -button button1
+}
 get-view $atelier1 | get-section $men_OngletCadreEtude
     | get-button $btn_CadreEtude | click
 with [get-editor $wnd_ObjectifEtude] {

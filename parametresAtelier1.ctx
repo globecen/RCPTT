@@ -6,13 +6,13 @@ Element-Type: context
 Element-Version: 2.0
 Id: _wgWyYCAFEeqNzuzastf2sA
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/18/19, 10:54 AM
+Save-Time: 12/18/19, 1:47 PM
 
 ------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee
 Content-Type: text/properties
 Entry-Name: .parameters.context
 
-#Wed Dec 18 10:54:35 CET 2019
+#Wed Dec 18 13:47:23 CET 2019
 wnd_PlanifierAtelier=Planning des ateliers
 depot=D\u00E9p\u00F4t local/BIOTECH
 lb_cycleStrategique=Dur\u00E9e des cycles strat\u00E9giques \:
@@ -20,8 +20,10 @@ btn_PlanifierAtelier=Planifier les ateliers
 btn_CadreEtude=D\u00E9finir les objectifs et le cadre temporel
 tab_IdentifiParticipant=Identification des participants aux ateliers
 sect_CadreTemporel=Cadre temporel de l'\u00E9tude
+MousePress=mouse-press -x 36 -y 52 -button button1
 atelier1=1 - Cadrage et socle de s\u00E9curit\u00E9
 men_PlanifierAtelier=Planifier les ateliers de l'\u00E9tude
+MouseRelease=mouse-release -x 36 -y 52 -button button1
 atelier3=3 - Sc\u00E9narios strat\u00E9giques
 men_OngletCadreEtude=D\u00E9finir les objectifs et le cadre temporel de l'\u00E9tude
 atelier2=2 - Sources de risque
