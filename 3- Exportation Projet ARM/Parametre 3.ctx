@@ -1,0 +1,23 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Context-Type: org.eclipse.rcptt.ctx.parameters
+Element-Name: Parametre 3
+Element-Type: context
+Element-Version: 2.0
+Id: _t-BWYCGjEeq8VY4pg_UPwg
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/18/19, 4:51 PM
+
+------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee
+Content-Type: text/properties
+Entry-Name: .parameters.context
+
+#Wed Dec 18 16:51:59 CET 2019
+lb_Folder=C\:\\\\ProjetARM
+lb_ChoixProjet=D\u00E9p\u00F4t local/BIOTECH
+lb_BasesDeConnaissancesVersUnFichierBibliotheque=Bases de connaissances vers un fichier biblioth\u00E8que
+lb_ProjetsAuFormatFichiers=Projets au format fichiers
+lb_ExportDeProjets=Export de projets
+lb_FileLibraries=C\:\\\\ProjetARM\\\\test.armlibraries
+
+------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee--
