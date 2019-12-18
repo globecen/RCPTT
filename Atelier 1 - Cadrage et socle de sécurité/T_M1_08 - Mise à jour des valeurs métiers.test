@@ -1,0 +1,71 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _wgWyYCAFEeqNzuzastf2sA
+Element-Name: T_M1_08 - Mise à jour des valeurs métiers
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _115igCGsEeqTVt1sZyB3_w
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/18/19, 4:45 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | get-cell 1 0 | mouse down -count 1
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | select "Base de valeurs métier"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | get-cell 1 0 | mouse up -count 1
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | key-type "TRAVERSE_TAB_NEXT"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-toolbar | key-type "TRAVERSE_TAB_NEXT"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Identifier les missions de l'objet de l'étude" 
+    | get-button "Identifier les missions" | key-type "TRAVERSE_TAB_NEXT"
+with [get-editor "Base de valeurs métier" | get-section "Contenu de la base de valeurs métier" | get-canvas] {
+    key-type Tab
+    key-type Left
+    key-type Up -times 2
+    key-type F2
+}
+with [get-window "Biens supports"] {
+    with [get-section "Élément(s) disponible(s)"] {
+        get-editbox | set-text "entrer le texte du filtre"
+        get-tree | select "Biens supports/Serveurs bureautiques (externes)"
+    }
+    get-button -index 2 | click
+    get-section "Élément(s) disponible(s)" | get-tree | select "Biens supports/Serveurs bureautiques (internes)"
+    get-button -index 2 | click
+    get-section "Élément(s) disponible(s)" | get-tree | select "Biens supports/Systèmes de production des antigènes"
+    get-button -index 2 | click
+    get-button OK | click
+}
+with [get-editor "Base de valeurs métier" | get-section "Contenu de la base de valeurs métier" | get-canvas] {
+    key-type Down
+    key-type F2
+}
+with [get-window "Biens supports"] {
+    with [get-section "Élément(s) disponible(s)"] {
+        get-editbox | set-text "entrer le texte du filtre"
+        get-tree | select "Biens supports/Systèmes de production"
+    }
+    get-button -index 2 | click
+    get-button OK | click
+}
+with [get-editor "Base de valeurs métier" | get-section "Contenu de la base de valeurs métier" | get-canvas] {
+    key-type Down
+    key-type F2
+}
+with [get-window "Biens supports"] {
+    with [get-section "Élément(s) disponible(s)"] {
+        get-editbox | set-text "entrer le texte du filtre"
+        get-tree | select "Biens supports/Serveurs bureautiques (internes)"
+    }
+    get-button -index 2 | click
+    get-button OK | click
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

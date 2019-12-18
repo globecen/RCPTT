@@ -1,0 +1,24 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _wgWyYCAFEeqNzuzastf2sA
+Element-Name: T_M1_03 - Exporter l'identification des participants
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _F8CsMCGYEeqTVt1sZyB3_w
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/18/19, 2:18 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view $atelier1 | get-section $men_PlanifierAtelier 
+    | get-button $btn_PlanifierAtelier | click
+with [get-editor $wnd_PlanifierAtelier] {
+    get-section $tab_IdentifiParticipant 
+        | get-button $ExporterTab | click
+    get-section $tab_PlanningEtude | get-button $ExporterTab | click
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

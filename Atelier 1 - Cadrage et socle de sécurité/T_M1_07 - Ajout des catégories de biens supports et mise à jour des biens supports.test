@@ -1,0 +1,87 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _wgWyYCAFEeqNzuzastf2sA
+Element-Name: T_M1_07 - Ajout des catégories de biens supports et mise à jour des biens supports
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _ahN7QCGqEeqTVt1sZyB3_w
+Property-NomCategorieBS: Serveurs bureautiques
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/18/19, 4:39 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | get-cell 2 0 | mouse down -count 1
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | select "Catégories de bien support"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | get-cell 2 0 | mouse up -count 1
+get-editor "Catégories de bien support" | get-section "Contenu de la base de catégories de bien support" 
+    | get-button "Ajouter une catégorie de bien support à la base" | click
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | key-type "TRAVERSE_TAB_NEXT"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-toolbar | key-type "TRAVERSE_TAB_NEXT"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Identifier les missions de l'objet de l'étude" 
+    | get-button "Identifier les missions" | key-type "TRAVERSE_TAB_NEXT"
+with [get-editor "Catégories de bien support" | get-section "Contenu de la base de catégories de bien support"] {
+    with [get-canvas] {
+        key-type Tab
+        key-type Right
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomCategorieBS
+    }
+}
+
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | get-cell 3 0 | mouse down -count 1
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | select "Biens supports"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | get-cell 3 0 | mouse up -count 1
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | key-type "TRAVERSE_TAB_NEXT"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-toolbar | key-type "TRAVERSE_TAB_NEXT"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Identifier les missions de l'objet de l'étude" 
+    | get-button "Identifier les missions" | key-type "TRAVERSE_ARROW_NEXT"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Identifier les missions de l'objet de l'étude" 
+    | get-button "Identifier les missions" | key-type Right
+get-view "1 - Cadrage et socle de sécurité" | get-section "Identifier les missions de l'objet de l'étude" 
+    | get-button "Identifier les missions" | key-type "TRAVERSE_TAB_NEXT"
+with [get-editor "Biens supports" | get-section "Contenu de la base de biens supports" | get-canvas] {
+    key-type Right
+    key-type Tab
+    key-type Down
+    key-type Left -times 2
+    key-type Up -times 3
+    key-type F2
+}
+with [get-window "Catégories"] {
+    with [get-section "Élément(s) disponible(s)"] {
+        get-editbox | set-text "entrer le texte du filtre"
+        get-tree | select "Catégories de bien support/Serveurs bureautiques"
+    }
+    get-button -index 2 | click
+    get-button OK | click
+}
+with [get-editor "Biens supports" | get-section "Contenu de la base de biens supports" | get-canvas] {
+    key-type Down
+    key-type F2
+}
+with [get-window "Catégories"] {
+    with [get-section "Élément(s) disponible(s)"] {
+        get-editbox | set-text "entrer le texte du filtre"
+        get-tree | select "Catégories de bien support/Serveurs bureautiques"
+    }
+    get-button -index 2 | click
+    get-button OK | click
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

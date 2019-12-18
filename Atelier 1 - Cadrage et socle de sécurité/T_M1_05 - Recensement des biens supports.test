@@ -1,0 +1,132 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _wgWyYCAFEeqNzuzastf2sA
+Element-Name: T_M1_05 - Recensement des biens supports
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _knTeoCGjEeqTVt1sZyB3_w
+Property-DescriptionBS1: Serveurs bureautiques permettant de stocker une partie des données de R&D
+Property-DescriptionBS2: Serveurs bureautiques permettant de stocker l'ensemble des données de R&D
+Property-DescriptionBS3: Serveurs bureautiques permettant de stocker l’ensemble des données relatives à la traçabilité et au contrôle, pour les différents processus
+Property-DescriptionBS4: Ensemble de machines et équipements informatiques permettant de fabriquer des vaccins à grande échelle
+Property-NomBS1: Serveurs bureautiques (externes)
+Property-NomBS2: Serveurs bureautiques (internes)
+Property-NomBS3: Systèmes de production
+Property-NomBS4: Systèmes de production des antigènes
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/18/19, 3:59 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | get-cell 3 0 | mouse down -count 1
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | select "Biens supports"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | get-cell 3 0 | mouse up -count 1
+with [get-editor "Biens supports" | get-section "Contenu de la base de biens supports" 
+    | get-button "Ajouter un bien support à la base"] {
+    click
+    click
+    click
+    click
+}
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | key-type "TRAVERSE_TAB_NEXT"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-toolbar | key-type "TRAVERSE_TAB_NEXT"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Identifier les missions de l'objet de l'étude" 
+    | get-button "Identifier les missions" | key-type "TRAVERSE_TAB_NEXT"
+with [get-editor "Biens supports" | get-section "Contenu de la base de biens supports"] {
+    with [get-canvas] {
+        key-type Tab
+        key-type Left
+        key-type Up -times 3
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomBS1
+    }
+    with [get-canvas] {
+        key-type Down
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomBS2
+    }
+    with [get-canvas] {
+        key-type Up
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomBS3
+    }
+    with [get-canvas] {
+        key-type Up
+        key-type Down
+        key-type Up
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomBS4
+    }
+    with [get-canvas] {
+        key-type Up
+        key-type Down
+        key-type Up
+        key-type Right -times 2
+        key-type F2
+    }
+}
+with [get-window "Catégories"] {
+    get-section "Élément(s) disponible(s)" | get-editbox | set-text "entrer le texte du filtre"
+    close
+}
+with [get-editor "Biens supports" | get-section "Contenu de la base de biens supports" | get-canvas] {
+    key-type Right
+    key-type F2
+}
+with [get-window Responsables] {
+    get-section "Élément(s) disponible(s)" | get-editbox | set-text "entrer le texte du filtre"
+    close
+}
+with [get-editor "Biens supports" | get-section "Contenu de la base de biens supports" | get-canvas] {
+    key-type Right
+    key-type F2
+}
+with [get-window Description] {
+    with [get-control Browser | get-control Any -index 1] {
+        type-text "Serveurs bureautiques permettant de stocker une partie des données de R&D"
+        key-type Enter
+    }
+    get-button OK | click
+}
+with [get-editor "Biens supports" | get-section "Contenu de la base de biens supports" | get-canvas] {
+    key-type Down
+    key-type F2
+}
+with [get-window Description] {
+    get-control Browser | get-control Any -index 1 | type-text $DescriptionBS2
+    get-button OK | click
+}
+with [get-editor "Biens supports" | get-section "Contenu de la base de biens supports" | get-canvas] {
+    key-type Down
+    key-type F2
+}
+with [get-window Description] {
+    get-control Browser | get-control Any -index 1 | type-text $DescriptionBS3
+    get-button OK | click
+}
+with [get-editor "Biens supports" | get-section "Contenu de la base de biens supports" | get-canvas] {
+    key-type Down
+    key-type F2
+}
+with [get-window Description] {
+    get-control Browser | get-control Any -index 1 | type-text $DescriptionBS4
+    get-button OK | click
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
