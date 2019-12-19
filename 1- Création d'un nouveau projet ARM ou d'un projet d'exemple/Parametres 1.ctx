@@ -6,13 +6,13 @@ Element-Type: context
 Element-Version: 2.0
 Id: _V5w78CDOEeqBWeuHxtTlfw
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/18/19, 4:30 PM
+Save-Time: 12/19/19, 9:41 AM
 
 ------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee
 Content-Type: text/properties
 Entry-Name: .parameters.context
 
-#Wed Dec 18 16:30:21 CET 2019
+#Thu Dec 19 09:41:39 CET 2019
 lb_ObjetsNecessairesAjouts=Objets n\u00E9cessaires ajout\u00E9s
 btn_CreerNouveauDepotLocal=Cr\u00E9er un nouveau d\u00E9p\u00F4t local
 lb_ConduireUneEtudeDeRisqueCompleteEtFineParExempleSurUnProduitDeSecuriteOuEnVueDeLHomologationDUnSysteme=Conduire une \u00E9tude de risque compl\u00E8te et fine, par exemple sur un produit de s\u00E9curit\u00E9 ou en vue de l'homologation d'un syst\u00E8me
@@ -21,6 +21,7 @@ wnd_NouveauDepot=Nouveau d\u00E9p\u00F4t
 lb_NomDepot=Nom du d\u00E9p\u00F4t \:
 lb_OrienterUnAuditDeSecuriteEtNotammentUnTestDIntrusion=Orienter un audit de s\u00E9curit\u00E9 et notamment un test d'intrusion
 lb_NouveauProjet=Nouveau
+men_NouveauProjet=Nouveau projet
 lb_ExempleBiotechFr=Exemples/BIOTECH (Fran\u00E7ais)
 lb_IdentifierEtAnalyserLesScenariosDeHautNiveauIntegrantLEcosysteme=Identifier et analyser les sc\u00E9narios de haut niveau, int\u00E9grant l'\u00E9cosyst\u00E8me
 btn_NouveauProjet=Nouveau (Ctrl+N)
