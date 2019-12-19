@@ -215,7 +215,7 @@
                all tests, but it is possible to generate one file per
                test -->
           <!--
-          <splitHtmlReport>true</splitHtmlReport>
+           <splitHtmlReport>true</splitHtmlReport>
           -->
         </configuration>
       </plugin>
