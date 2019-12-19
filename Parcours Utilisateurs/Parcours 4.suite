@@ -1,0 +1,43 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: Parcours 4
+Element-Type: testsuite
+Element-Version: 2.0
+Id: _oiUHICJdEeq8fLxhrwTGIQ
+Manually-Ordered: true
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/19/19, 1:50 PM
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+L'utilisateur :
+- Créer un nouveau dépot local
+- Créer un nouveau projet 
+- Défini le cadre d'étude
+- Défini le périmètre métier et technique
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8
+Content-Type: text/testcase
+Entry-Name: testcase-items
+
+_y8qNoBEbEeqE8Mf0bEbk0A	// kind: 'test' name: 'ChoixDuD�potLocal' path: '../1- Cr�ation d'un nouveau projet ARM ou d'un projet d'exemple/D�finir le d�pot/ChoixDuD�potLocal.test'
+_X4ApcBD4EeqE8Mf0bEbk0A	// kind: 'test' name: 'NouveauProjet' path: '../1- Cr�ation d'un nouveau projet ARM ou d'un projet d'exemple/NouveauProjet.test'
+_b7TcgBG4Eeq1JdnKnwNugA	// kind: 'test' name: 'T_M1_01.1 - Renseigner les objectifs du cadre de l'�tude' path: '../Atelier 1 - Cadrage et socle de s�curit�/T_M1_01.1 - Renseigner les objectifs du cadre de l'�tude.test'
+_eDTDwBG4Eeq1JdnKnwNugA	// kind: 'test' name: 'T_M1_01.2 - Renseigner les participants' path: '../Atelier 1 - Cadrage et socle de s�curit�/T_M1_01_2 - Renseigner les participants.test'
+_QaWEUBHEEeq1JdnKnwNugA	// kind: 'test' name: 'T_M1_01.3 - Renseigner le cadre temporel de l'�tude' path: '../Atelier 1 - Cadrage et socle de s�curit�/T_M1_01_3 - Renseigner le cadre temporel de l'�tude.test'
+_RGTBQB_vEeqNzuzastf2sA	// kind: 'test' name: 'T_M1_01.4 - Renseigner les contraintes de l'�tude' path: '../Atelier 1 - Cadrage et socle de s�curit�/T_M1_01_4 - Renseigner les contraintes de l'�tude.test'
+_b-9hkBHFEeq1JdnKnwNugA	// kind: 'test' name: 'T_M1_01.5 - Renseigner les �l�ments du planning projet' path: '../Atelier 1 - Cadrage et socle de s�curit�/T_M1_01.5 - Renseigner les �l�ments du planning projet.test'
+_lFYWsBHJEeq1JdnKnwNugA	// kind: 'test' name: 'T_M1_02 - suppression d'un �l�ment du cadre d'�tude' path: '../Atelier 1 - Cadrage et socle de s�curit�/T_M1_02 - suppression d'un �l�ment du cadre d'�tude.test'
+_U2bGQCDnEeq5RMJhH7vAnw	// kind: 'test' name: 'T_M1_02.1 - Modifier un �l�ment du cadre d'�tude' path: '../Atelier 1 - Cadrage et socle de s�curit�/T_M1_02_1 - Modifier un �l�ment du cadre d'�tude.test'
+_F8CsMCGYEeqTVt1sZyB3_w	// kind: 'test' name: 'T_M1_03 - Exporter l'identification des participants' path: '../Atelier 1 - Cadrage et socle de s�curit�/T_M1_03 - Exporter l'identification des participants.test'
+_dfdWYCGcEeqTVt1sZyB3_w	// kind: 'test' name: 'T_M1_04 - Recensement des valeurs m�tiers' path: '../Atelier 1 - Cadrage et socle de s�curit�/T_M1_04 - Recensement des valeurs m�tiers.test'
+_knTeoCGjEeqTVt1sZyB3_w	// kind: 'test' name: 'T_M1_05 - Recensement des biens supports' path: '../Atelier 1 - Cadrage et socle de s�curit�/T_M1_05 - Recensement des biens supports.test'
+_D1R6YCGgEeqTVt1sZyB3_w	// kind: 'test' name: 'T_M1_06 - Recensement des responsables' path: '../Atelier 1 - Cadrage et socle de s�curit�/T_M1_06 - Recensement des responsables.test'
+_ahN7QCGqEeqTVt1sZyB3_w	// kind: 'test' name: 'T_M1_07 - Ajout des cat�gories de biens supports et mise � jour des biens supports' path: '../Atelier 1 - Cadrage et socle de s�curit�/T_M1_07 - Ajout des cat�gories de biens supports et mise � jour des biens supports.test'
+_115igCGsEeqTVt1sZyB3_w	// kind: 'test' name: 'T_M1_08 - Mise � jour des valeurs m�tiers' path: '../Atelier 1 - Cadrage et socle de s�curit�/T_M1_08 - Mise � jour des valeurs m�tiers.test'
+_lMMh4CJHEeqYwYGVPR5G3g	// kind: 'test' name: 'T_M1_09 - Identification des missions de l'�tude' path: '../Atelier 1 - Cadrage et socle de s�curit�/T_M1_09 - Identification des missions de l'�tude.test'
+_CrtzkCJLEeqYwYGVPR5G3g	// kind: 'test' name: 'T_M1_10 - Ajouter des besoins de s�curit�s' path: '../Atelier 1 - Cadrage et socle de s�curit�/T_M1_10 - Ajouter des besoins de s�curit�s.test'
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8--
