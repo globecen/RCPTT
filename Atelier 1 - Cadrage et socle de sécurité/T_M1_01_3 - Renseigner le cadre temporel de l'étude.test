@@ -9,7 +9,7 @@ Id: _QaWEUBHEEeq1JdnKnwNugA
 Property-CycleOperationnel: 2 ans
 Property-CycleStrategique: 5 ans
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/18/19, 2:07 PM
+Save-Time: 12/19/19, 10:13 AM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -22,7 +22,6 @@ Vérifier que l'utilisateur puisse renseigner le cadre temporel de l'étude
 Content-Type: text/ecl
 Entry-Name: .content
 
-get-view Projets | get-tree | select $depot | double-click
 get-view $atelier1 | get-section $men_OngletCadreEtude
     | get-button $btn_CadreEtude | click
 with [get-editor $wnd_ObjectifEtude | get-section $sect_CadreTemporel] {

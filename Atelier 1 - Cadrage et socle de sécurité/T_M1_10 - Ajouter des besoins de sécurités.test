@@ -1,0 +1,68 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _wgWyYCAFEeqNzuzastf2sA
+Element-Name: T_M1_10 - Ajouter des besoins de sécurités
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _CrtzkCJLEeqYwYGVPR5G3g
+Property-NomBesionSecu2: Détournement d'usage d'un service
+Property-NomBesoinSecu1: Falsification ou modification d'une information
+Property-NomBesoinSecu3: Altération d'un processus
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/19/19, 11:59 AM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view $atelier1 | get-section "Préparer les besoins de sécurité" | get-table | get-cell 8 0 
+    | mouse down -count 1
+get-view $atelier1 | get-section "Préparer les besoins de sécurité" | get-table 
+    | select "Échelle de besoin de sécurité"
+get-view $atelier1 | get-section "Préparer les besoins de sécurité" | get-table | get-cell 8 0 
+    | mouse up -count 1
+with [get-editor "Échelle de besoin de sécurité" | get-section "Niveaux de l'échelle de besoins de sécurité" 
+    | get-button "Ajouter un niveau de besoins de sécurité à l'échelle"] {
+    click
+    click
+    click
+}
+get-view $atelier1 | get-section "Préparer les besoins de sécurité" | get-table 
+    | key-type "TRAVERSE_TAB_NEXT"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les besoins de sécurité" | get-toolbar 
+    | key-type "TRAVERSE_TAB_NEXT"
+get-view $atelier1 | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | key-type "TRAVERSE_TAB_NEXT"
+get-view $atelier1 | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-toolbar | key-type "TRAVERSE_TAB_NEXT"
+get-view $atelier1 | get-section "Identifier les missions de l'objet de l'étude" 
+    | get-button "Identifier les missions" | key-type "TRAVERSE_TAB_NEXT"
+with [get-editor "Échelle de besoin de sécurité" | get-section "Niveaux de l'échelle de besoins de sécurité"] {
+    with [get-canvas] {
+        key-type Tab -times 2
+        key-type Left
+        key-type Up -times 2
+        key-type Right
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomBesoinSecu1
+    }
+    with [get-canvas] {
+        key-type Down
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomBesionSecu2
+    }
+    with [get-canvas] {
+        key-type Down
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomBesoinSecu3
+    }
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

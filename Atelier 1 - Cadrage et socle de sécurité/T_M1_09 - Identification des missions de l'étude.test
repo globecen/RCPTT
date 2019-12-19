@@ -1,0 +1,55 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _wgWyYCAFEeqNzuzastf2sA
+Element-Name: T_M1_09 - Identification des missions de l'étude
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _lMMh4CJHEeqYwYGVPR5G3g
+Property-NomMission: Identifier et fabriquer des vaccins
+Property-btn_AjouterMission: Ajouter une mission à l'étude
+Property-btn_IdentifierMission: Identifier les missions
+Property-sect_IdentifierMission: Identifier les missions de l'objet de l'étude
+Property-tab_IdentificationMission: Identification des missions de l'objet étudié
+Property-wnd_MissionEtude: Missions de l'objet de l'étude
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/19/19, 11:21 AM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view $atelier1 | get-section $sect_IdentifierMission 
+    | get-button $btn_IdentifierMission | click
+get-editor $wnd_MissionEtude | get-section $tab_IdentificationMission 
+    | get-button $btn_AjouterMission | click
+get-view $atelier1 | get-section $sect_IdentifierMission 
+    | get-button $btn_IdentifierMission | key-type "TRAVERSE_TAB_NEXT"
+with [get-editor $wnd_MissionEtude | get-section $tab_IdentificationMission] {
+    with [get-canvas] {
+        key-type Tab -times 2
+        key-type Left
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomMission
+    }
+    with [get-canvas] {
+        key-type Right
+        key-type F2
+    }
+}
+with [get-window Nom] {
+    with [get-section "Élément(s) disponible(s)"] {
+        get-editbox | set-text "entrer le texte du filtre"
+        get-tree | select "Base de valeurs métier/Recherche & développement (R&D)"
+    }
+    get-button -index 2 | click
+    get-section "Élément(s) disponible(s)" | get-tree | select "Base de valeurs métier/Fabriquer des vaccins"
+    get-button -index 2 | click
+    get-section "Élément(s) disponible(s)" | get-tree | select "Base de valeurs métier/Traçabilité et contrôle"
+    get-button -index 2 | click
+    get-button OK | click
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
