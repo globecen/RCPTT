@@ -1,0 +1,220 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _wgWyYCAFEeqNzuzastf2sA
+Element-Name: T_M1_06 - Recensement des responsables
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _D1R6YCGgEeqTVt1sZyB3_w
+Property-NomResponsable1: Pharmacien
+Property-NomResponsable10: Équipe sûreté
+Property-NomResponsable11: Équipe continuité d'activité
+Property-NomResponsable2: Responsable production
+Property-NomResponsable3: Responsable qualité
+Property-NomResponsable4: DSI
+Property-NomResponsable5: Laboratoires
+Property-NomResponsable6: Fournisseurs de matériel
+Property-NomResponsable7: RSSI
+Property-NomResponsable8: Équipe juridique
+Property-NomResponsable9: Équipe R&D
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/18/19, 4:17 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | get-cell 4 0 | mouse down -count 1
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | select "Base de responsables"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | get-cell 4 0 | mouse up -count 1
+with [get-editor "Base de responsables" | get-section "Contenu de la base de responsables" 
+    | get-button "Ajouter un responsable à la base"] {
+    click
+    click
+    click
+    click
+    click
+    click
+    click
+    click
+    click
+    click
+    click
+}
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | key-type "TRAVERSE_TAB_NEXT"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-toolbar | key-type "TRAVERSE_TAB_NEXT"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Identifier les missions de l'objet de l'étude" 
+    | get-button "Identifier les missions" | key-type "TRAVERSE_TAB_NEXT"
+with [get-editor "Base de responsables" | get-section "Contenu de la base de responsables"] {
+    with [get-canvas] {
+        key-type Tab
+        key-type Up -times 10
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomResponsable1
+    }
+    with [get-canvas] {
+        key-type Right
+        key-type F2
+    }
+}
+with [get-window "Valeurs métier"] {
+    with [get-section "Élément(s) disponible(s)"] {
+        get-editbox | set-text "entrer le texte du filtre"
+        get-tree | select "Base de valeurs métier/Recherche & développement (R&D)"
+    }
+    get-button -index 2 | click
+    get-button OK | click
+}
+with [get-editor "Base de responsables" | get-section "Contenu de la base de responsables" | get-canvas] {
+    key-type Down
+    key-type F2
+}
+with [get-window "Valeurs métier"] {
+    with [get-section "Élément(s) disponible(s)"] {
+        get-editbox | set-text "entrer le texte du filtre"
+        get-tree | select "Base de valeurs métier/Fabriquer des vaccins"
+    }
+    get-button -index 2 | click
+    get-button OK | click
+}
+with [get-editor "Base de responsables" | get-section "Contenu de la base de responsables"] {
+    with [get-canvas] {
+        key-type Left
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomResponsable2
+    }
+    with [get-canvas] {
+        key-type Down
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomResponsable3
+    }
+    with [get-canvas] {
+        key-type Right
+        key-type F2
+    }
+}
+with [get-window "Valeurs métier"] {
+    with [get-section "Élément(s) disponible(s)"] {
+        get-editbox | set-text "entrer le texte du filtre"
+        get-tree | select "Base de valeurs métier/Traçabilité et contrôle"
+    }
+    get-button -index 2 | click
+    get-button OK | click
+}
+with [get-editor "Base de responsables" | get-section "Contenu de la base de responsables"] {
+    with [get-canvas] {
+        key-type Left
+        key-type Down
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomResponsable4
+    }
+    with [get-canvas] {
+        key-type Right -times 2
+        key-type F2
+    }
+}
+with [get-window "Biens supports"] {
+    with [get-section "Élément(s) disponible(s)"] {
+        get-editbox | set-text "entrer le texte du filtre"
+        get-tree | select "Biens supports/Serveurs bureautiques (internes)"
+    }
+    get-button -index 2 | click
+    get-section "Élément(s) disponible(s)" | get-tree | select "Biens supports/Systèmes de production"
+    get-button -index 2 | click
+    get-button OK | click
+}
+with [get-editor "Base de responsables" | get-section "Contenu de la base de responsables" | get-canvas] {
+    key-type Down
+    key-type F2
+}
+with [get-window "Biens supports"] {
+    with [get-section "Élément(s) disponible(s)"] {
+        get-editbox | set-text "entrer le texte du filtre"
+        get-tree | select "Biens supports/Serveurs bureautiques (externes)"
+    }
+    get-button -index 2 | click
+    get-section "Élément(s) disponible(s)" | get-tree | select "Biens supports/Systèmes de production des antigènes"
+    get-button -index 2 | click
+    get-button OK | click
+}
+with [get-editor "Base de responsables" | get-section "Contenu de la base de responsables"] {
+    with [get-canvas] {
+        key-type Left -times 2
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomResponsable5
+    }
+    with [get-canvas] {
+        key-type Down
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomResponsable6
+    }
+    with [get-canvas] {
+        key-type Right -times 2
+        key-type F2
+    }
+}
+with [get-window "Biens supports"] {
+    with [get-section "Élément(s) disponible(s)"] {
+        get-editbox | set-text "entrer le texte du filtre"
+        get-tree | select "Biens supports/Systèmes de production"
+    }
+    get-button -index 2 | click
+    get-button OK | click
+}
+with [get-editor "Base de responsables" | get-section "Contenu de la base de responsables"] {
+    with [get-canvas] {
+        key-type Down
+        key-type Left -times 2
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomResponsable7
+    }
+    with [get-canvas] {
+        key-type Down
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomResponsable8
+    }
+    with [get-canvas] {
+        key-type Down
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomResponsable9
+    }
+    with [get-canvas] {
+        key-type Down
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomResponsable10
+    }
+    with [get-canvas] {
+        key-type Down
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text $NomResponsable11
+    }
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

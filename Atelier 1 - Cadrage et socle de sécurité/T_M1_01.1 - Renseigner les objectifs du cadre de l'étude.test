@@ -11,7 +11,7 @@ Property-ObjetEtude: Sensibilation basique à la sécurité du numérique à la 
 Property-edt_ObjectifEtude: Objectifs de l'étude
 Property-edt_ObjetEtude: Objet de l'étude
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/18/19, 1:47 PM
+Save-Time: 12/18/19, 1:56 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -29,10 +29,10 @@ with [get-view Ateliers | get-canvas | double-click]
    mouse-press -x 36 -y 52 -button button1
    mouse-release -x 36 -y 52 -button button1
 }
-get-view $atelier1 | get-section $men_OngletCadreEtude
+/*get-view $atelier1 | get-section $men_OngletCadreEtude
     | get-button $btn_CadreEtude | click
 with [get-editor $wnd_ObjectifEtude] {
     get-section $edt_ObjetEtude | get-editbox | set-text $ObjetEtude
     get-section $edt_ObjectifEtude | get-editbox | set-text $ObjectifsEtude
-}
+}*/
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

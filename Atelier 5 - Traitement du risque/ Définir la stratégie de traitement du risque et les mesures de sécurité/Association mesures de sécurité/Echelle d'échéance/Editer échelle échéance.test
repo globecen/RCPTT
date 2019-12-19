@@ -1,12 +1,14 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
+Contexts: _S9tsgCAIEeqt7akAoeXmaQ
 Element-Name: Editer échelle échéance
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _mNpjIBHFEeq9Sbz1456Pnw
+Property-lb_echelle_echeance: Échelle d'échéance (1)
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 11/28/19, 10:59 AM
+Save-Time: 12/18/19, 3:29 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -19,15 +21,38 @@ L'utilisateur peut editer/modifier l'échelle d'échéance créée.
 Content-Type: text/ecl
 Entry-Name: .content
 
-get-view "5 - Traitement du risque" | get-section "Préparation des données" | get-table | get-cell 6 0 | mouse down 
+with [get-view Ateliers | get-canvas | double-click]
+{
+   mouse-press -x 305 -y 45 -button button1
+   mouse-release -x 305 -y 45 -button button1
+}
+
+get-view $lb_Traitement_du_risque | get-section $men_Preparation_donnees | get-table | get-cell 7 0 | mouse down 
     -count 1
-get-view "5 - Traitement du risque" | get-section "Préparation des données" | get-table 
-    | select "Échelle d'échéance \\(1\\)"
-get-view "5 - Traitement du risque" | get-section "Préparation des données" | get-table | get-cell 6 0 | mouse up 
+get-view $lb_Traitement_du_risque | get-section $men_Preparation_donnees | get-table 
+    | select $lb_echelle_echeance
+get-view $lb_Traitement_du_risque | get-section $men_Preparation_donnees | get-table | get-cell 7 0 | mouse up 
     -count 1
-with [get-editor "Échelle d'échéance (1)" | get-section "Échéances d'application des mesures de sécurité" 
-    | get-editbox] {
-    set-text Name
-    key-type Enter
+with [get-editor $lb_echelle_echeance | get-section "Échéances d'application des mesures de sécurité"] {
+    get-button "Ajouter un niveau d'échéance à l'échelle" | click
+    with [get-canvas] {
+        key-type Right
+        key-type F2
+    }
+    with [get-editbox] {
+        set-text Test1
+        key-type Enter
+    }
+    with [get-canvas] {
+        key-type Right
+        key-type F2
+    }
+}
+with [get-window Description] {
+    with [get-control Browser | get-control Any -index 1] {
+        type-text "Commentaire test"
+        key-type Enter
+    }
+    get-button OK | click
 }
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

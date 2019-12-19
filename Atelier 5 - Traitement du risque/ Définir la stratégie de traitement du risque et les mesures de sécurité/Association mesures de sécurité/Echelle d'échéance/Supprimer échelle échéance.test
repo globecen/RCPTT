@@ -8,7 +8,7 @@ External-Reference:
 Id: _wfTZIBHFEeq9Sbz1456Pnw
 Property-lb_echelle_echeance: Échelle d'échéance 
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/17/19, 3:38 PM
+Save-Time: 12/18/19, 3:22 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -21,6 +21,11 @@ L'utilisateur peut supprimer une échelle d'échéance.
 Content-Type: text/ecl
 Entry-Name: .content
 
+with [get-view Ateliers | get-canvas | double-click]
+{
+   mouse-press -x 305 -y 45 -button button1
+   mouse-release -x 305 -y 45 -button button1
+}
 get-view $lb_Traitement_du_risque | get-section $men_Preparation_donnees | get-table | get-cell 7 0 | mouse down 
     -count 1
 get-view $lb_Traitement_du_risque | get-section $men_Preparation_donnees | get-table 

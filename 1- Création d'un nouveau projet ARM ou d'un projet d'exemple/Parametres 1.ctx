@@ -6,14 +6,22 @@ Element-Type: context
 Element-Version: 2.0
 Id: _V5w78CDOEeqBWeuHxtTlfw
 Runtime-Version: 2.4.3.201909171500
+<<<<<<< HEAD
 Save-Time: 12/19/19, 9:41 AM
+=======
+Save-Time: 12/18/19, 3:45 PM
+>>>>>>> branch 'master' of https://github.com/globecen/RCPTT/
 
 ------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee
 Content-Type: text/properties
 Entry-Name: .parameters.context
 
+<<<<<<< HEAD
 #Thu Dec 19 09:41:39 CET 2019
 lb_ObjetsNecessairesAjouts=Objets n\u00E9cessaires ajout\u00E9s
+=======
+#Wed Dec 18 15:45:39 CET 2019
+>>>>>>> branch 'master' of https://github.com/globecen/RCPTT/
 btn_CreerNouveauDepotLocal=Cr\u00E9er un nouveau d\u00E9p\u00F4t local
 lb_ConduireUneEtudeDeRisqueCompleteEtFineParExempleSurUnProduitDeSecuriteOuEnVueDeLHomologationDUnSysteme=Conduire une \u00E9tude de risque compl\u00E8te et fine, par exemple sur un produit de s\u00E9curit\u00E9 ou en vue de l'homologation d'un syst\u00E8me
 tb_NomProjet=test
@@ -35,5 +43,21 @@ lb_NomDuProjet=Nom du projet \:
 lb_EtreEnConformiteAvecLesReferentielsDeSecuriteNumerique=\u00CAtre en conformit\u00E9 avec les r\u00E9f\u00E9rentiels de s\u00E9curit\u00E9 num\u00E9rique
 lb_NouvelleExemple=Nouvel exemple
 btn_DepotDistant=Se connecter \u00E0 un d\u00E9p\u00F4t distant existant
+<<<<<<< HEAD
+=======
+lb_EBIOSRiskManager=EBIOS Risk Manager
+lb_ObjetsNecessairesAjouts=Objets n\u00E9cessaires ajout\u00E9s
+lb_ConduireUneEtudeDeRisqueCompleteEtFineParExempleSurUnProduitDeSecuriteOuEnVueDeLHomologationDUnSysteme=Conduire une \u00E9tude de risque compl\u00E8te et fine, par exemple sur un produit de s\u00E9curit\u00E9 ou en vue de l'homologation d'un syst\u00E8me
+lb_OrienterUnAuditDeSecuriteEtNotammentUnTestDIntrusion=Orienter un audit de s\u00E9curit\u00E9 et notamment un test d'intrusion
+lb_ExempleBiotechFr=Exemples/BIOTECH (Fran\u00E7ais)
+lb_BasesAdditionnelles=Bases additionnelles
+btn_NouveauProjet=Nouveau (Ctrl+N)
+lb_DepotCreerProjet=D\u00E9p\u00F4t o\u00F9 cr\u00E9er le projet
+lb_DepotLocal=D\u00E9p\u00F4t local
+lb_EvaluerLeNiveauDeMenaceDeLEcoSystemeVisAVisDeLObjetDelEtude=\u00C9valuer le niveau de menace de l'\u00E9cosyst\u00E8me vis-\u00E0-vis de l'objet de l'\u00E9tude
+lb_ObjetsNecessairesAjoutes=Objets n\u00E9cessaires ajout\u00E9s
+lb_EtreEnConformiteAvecLesReferentielsDeSecuriteNumerique=\u00CAtre en conformit\u00E9 avec les r\u00E9f\u00E9rentiels de s\u00E9curit\u00E9 num\u00E9rique
+lb_CyberKillChain=Cyber kill chain
+>>>>>>> branch 'master' of https://github.com/globecen/RCPTT/
 
 ------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee--

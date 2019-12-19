@@ -14,7 +14,7 @@ Property-dateAtelier4: 15 février 2020 09:23
 Property-dateAtelier5: 20 mars 2020 08:23
 Property-tab_PlannnigAtelier: Planning des ateliers de l'étude
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/17/19, 1:59 PM
+Save-Time: 12/18/19, 2:14 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -26,6 +26,7 @@ Vérifier que l'utilisteur puisse remplir les éléments du planning projet
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
 Content-Type: text/ecl
 Entry-Name: .content
+
 
 get-view $atelier1 | get-section $men_PlanifierAtelier
     | get-button $btn_PlanifierAtelier | click
