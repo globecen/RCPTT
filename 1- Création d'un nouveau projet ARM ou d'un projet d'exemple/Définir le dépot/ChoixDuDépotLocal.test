@@ -1,13 +1,13 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
-Contexts: _V5w78CDOEeqBWeuHxtTlfw
+Contexts: _BHTQ8CI_Eeq8fLxhrwTGIQ
 Element-Name: ChoixDuDépotLocal
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _y8qNoBEbEeqE8Mf0bEbk0A
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/17/19, 3:15 PM
+Save-Time: 12/19/19, 10:52 AM
 Testcase-Type: ecl
 
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
@@ -16,8 +16,13 @@ Entry-Name: .content
 
 get-view Projets | get-tree | get-menu -path $men_AjoutDepot | click
 with [get-window $wnd_NouveauDepot] {
+    get-button $btn_DepotDistant | click
     get-button $btn_CreerNouveauDepotLocal | click
     get-button $btn_Suivant | click
-    get-button $btn_Terminer | click
+    get-editbox -after [get-label $lb_LibelleLocal] | set-text $lb_LibelleLocalText
+    get-editbox -after [get-label $lb_NomDuDepot] | set-text $lb_NomDuDepotText
+    get-group $lb_ModeDeGestionDesVersions | get-button $lb_HistoriqueHierarchique | click
+    get-group $lb_GenerationDesID | get-button $btn_UUIDReplicable | click
+    get-button Terminer | click
 }
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
