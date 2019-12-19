@@ -1,0 +1,27 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: Parcours 3
+Element-Type: testsuite
+Element-Version: 2.0
+Id: _Kg_YoCJJEeq8fLxhrwTGIQ
+Manually-Ordered: true
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/19/19, 11:36 AM
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+L'utilisateur
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8
+Content-Type: text/testcase
+Entry-Name: testcase-items
+
+_y8qNoBEbEeqE8Mf0bEbk0A	// kind: 'test' name: 'ChoixDuD�potLocal' path: '../1- Cr�ation d'un nouveau projet ARM ou d'un projet d'exemple/D�finir le d�pot/ChoixDuD�potLocal.test'
+_RSq24CJAEeq8fLxhrwTGIQ	// kind: 'test' name: 'CreerProjetExemple' path: '../1- Cr�ation d'un nouveau projet ARM ou d'un projet d'exemple/CreerProjetExemple.test'
+_Eg8bIBHJEeqoisrVvDeEOQ	// kind: 'test' name: 'G�n�rerUnRapportHtml' path: '../4- G�n�ration un rappport au format html, export et ajouter au projet/G�n�rerUnRapportHtml.test'
+_kdcM8BHJEeqoisrVvDeEOQ	// kind: 'test' name: 'AjouterAuProjet' path: '../4- G�n�ration un rappport au format html, export et ajouter au projet/AjouterAuProjet.test'
+_7kfBABHJEeqoisrVvDeEOQ	// kind: 'test' name: 'ExportLeRapportHtml' path: '../4- G�n�ration un rappport au format html, export et ajouter au projet/ExportLeRapportHtml.test'
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8--
