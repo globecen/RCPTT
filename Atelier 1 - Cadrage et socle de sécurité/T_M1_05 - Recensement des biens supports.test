@@ -15,12 +15,32 @@ Property-NomBS2: Serveurs bureautiques (internes)
 Property-NomBS3: Systèmes de production
 Property-NomBS4: Systèmes de production des antigènes
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/19/19, 10:13 AM
+Save-Time: 12/19/19, 3:34 PM
 Testcase-Type: ecl
 
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
 Content-Type: text/ecl
 Entry-Name: .content
+
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | get-cell 3 0 | mouse down -count 1
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | select "Biens supports"
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | get-cell 3 0 | mouse up -count 1
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | key-type Del
+with [get-window "Éléments impactés"] {
+    get-tree | select "Catégories de bien support"
+    get-button OK | click
+}
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-button -index 0 | click
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-menu -path "Ajouter une base de biens supports" | click
+get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
+    | get-table | get-editbox | set-text "Biens supports"
+
 
 get-view "1 - Cadrage et socle de sécurité" | get-section "Préparer les valeurs métiers et les biens supports" 
     | get-table | get-cell 3 0 | mouse down -count 1
