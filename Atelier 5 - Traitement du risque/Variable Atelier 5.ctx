@@ -6,23 +6,25 @@ Element-Type: context
 Element-Version: 2.0
 Id: _S9tsgCAIEeqt7akAoeXmaQ
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/18/19, 3:55 PM
+Save-Time: 12/19/19, 2:43 PM
 
 ------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee
 Content-Type: text/properties
 Entry-Name: .parameters.context
 
-#Wed Dec 18 15:55:14 CET 2019
+#Thu Dec 19 14:43:50 CET 2019
 men_Preparation_donnees=Pr\u00E9paration des donn\u00E9es
 btn_ajout_base_responsable=Ajouter une base de responsables
-lb_base_types_mesure_secu=Base de types de mesure de s\u00E9curit\u00E9
 btn_exporter_tableau_ajout_projet=Exporter le tableau et l'ajouter au projet
+lb_base_mesure_securite=Base de mesures de s\u00E9curit\u00E9
+men_eval_risque_resi_jalon=\u00C9valuation des risques r\u00E9siduels par jalon
+lb_base_types_mesure_secu=Base de types de mesure de s\u00E9curit\u00E9
 btn_supp_echelle_sele=Supprimer l'\u00E9chelle s\u00E9lectionn\u00E9e
 lb_Traitement_du_risque=5 - Traitement du risque
 btn_afficher_pacs=Afficher le PACS
 men_plan_amelioration_continue_securite=Plan d'am\u00E9lioration continue de la s\u00E9curit\u00E9
 btn_supp_base_connaissance_sele=Supprimer la base de connaissances s\u00E9lectionn\u00E9e
-lb_base_mesure_securite=Base de mesures de s\u00E9curit\u00E9
+lb_echelle_echeance=\u00C9chelle d'\u00E9ch\u00E9ance
 btn_ajout_base_mesure_securite=Ajouter une base de mesures de s\u00E9curit\u00E9
 
 ------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee--
