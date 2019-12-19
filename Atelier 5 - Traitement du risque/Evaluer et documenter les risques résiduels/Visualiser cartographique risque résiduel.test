@@ -1,0 +1,33 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _S9tsgCAIEeqt7akAoeXmaQ
+Element-Name: Visualiser cartographique risque résiduel
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _A9pGMCJhEeqm2fiINapX3w
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/19/19, 3:25 PM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+L’application permet de visualiser la cartographie du risque résiduel représentant les scénarios de risque selon leur gravité et vraisemblance résiduelles. Les échelles de représentation sont identiques à celles de la cartographie du risque initial. 
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+with [get-view Ateliers | get-canvas | double-click]
+{
+   mouse-press -x 305 -y 45 -button button1
+   mouse-release -x 305 -y 45 -button button1
+}
+
+get-view $lb_Traitement_du_risque | get-section $men_eval_risque_resi_jalon | get-tree 
+    | select "Échelle d'échéance/6 mois"
+get-view $lb_Traitement_du_risque | get-section $men_eval_risque_resi_jalon | get-tree 
+    | select "Échelle d'échéance/6 mois" | double-click
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

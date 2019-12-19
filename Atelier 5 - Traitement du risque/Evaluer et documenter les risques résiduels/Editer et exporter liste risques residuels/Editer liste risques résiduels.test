@@ -1,0 +1,38 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _S9tsgCAIEeqt7akAoeXmaQ
+Element-Name: Editer liste risques résiduels
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _vOLa0CJgEeqm2fiINapX3w
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/19/19, 2:52 PM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+L'utilisateur peut éditer la liste des risques résiduels.
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+with [get-view Ateliers | get-canvas | double-click]
+{
+   mouse-press -x 305 -y 45 -button button1
+   mouse-release -x 305 -y 45 -button button1
+}
+
+get-view $lb_Traitement_du_risque | get-section $men_eval_risque_resi_jalon | get-tree 
+    | select $lb_echelle_echeance
+with [get-editor $lb_echelle_echeance | get-section "Échéances d'application des mesures de sécurité"] {
+    get-canvas | key-type F2
+    with [get-editbox] {
+        set-text "3 mois"
+        key-type Enter
+    }
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

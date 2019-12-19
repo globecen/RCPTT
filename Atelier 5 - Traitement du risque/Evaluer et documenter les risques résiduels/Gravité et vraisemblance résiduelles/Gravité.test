@@ -1,0 +1,32 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _S9tsgCAIEeqt7akAoeXmaQ
+Element-Name: Gravité
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _WKhwICJgEeqm2fiINapX3w
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/19/19, 3:26 PM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+A chaque scénario de risque est associée une gravité suite à l’application des mesures de sécurité. Cette réévaluation s’effectue soit à partir de la cartographie du risque initial (en « glissant » manuellement les risques concernés de leur position initiale gravité/vraisemblance à la position résiduelle), soit depuis le tableau de synthèse des scénarios de risque (colonnes gravité et vraisemblance résiduelles). La cartographie du risque résiduelle et le tableau de synthèse des scénarios de risque sont mis à jour automatiquement selon les modifications apportées à l’un ou à l’autre.
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+with [get-view Ateliers | get-canvas | double-click]
+{
+   mouse-press -x 305 -y 45 -button button1
+   mouse-release -x 305 -y 45 -button button1
+}
+
+get-view "5 - Traitement du risque" | get-section "Évaluation des risques résiduels par jalon" | get-tree 
+    | select "Échelle d'échéance/6 mois"
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
