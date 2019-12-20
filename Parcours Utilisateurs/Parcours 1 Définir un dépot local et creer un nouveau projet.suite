@@ -1,12 +1,12 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
-Element-Name: Parcours 1
+Element-Name: Parcours 1 Définir un dépot local et creer un nouveau projet
 Element-Type: testsuite
 Element-Version: 2.0
 Id: _QgDSACDeEeqHv_ako5yTPA
 Manually-Ordered: true
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/19/19, 11:20 AM
+Save-Time: 12/20/19, 10:53 AM
 Tags: CreationDepotEtProjet
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -23,7 +23,7 @@ L'utilisateur :
 Content-Type: text/testcase
 Entry-Name: testcase-items
 
-_y8qNoBEbEeqE8Mf0bEbk0A	// kind: 'test' name: 'ChoixDuD�potLocal' path: '../1- Cr�ation d'un nouveau projet ARM ou d'un projet d'exemple/D�finir le d�pot/ChoixDuD�potLocal.test'
-_X4ApcBD4EeqE8Mf0bEbk0A	// kind: 'test' name: 'NouveauProjet' path: '../1- Cr�ation d'un nouveau projet ARM ou d'un projet d'exemple/NouveauProjet.test'
+_y8qNoBEbEeqE8Mf0bEbk0A	//
+_X4ApcBD4EeqE8Mf0bEbk0A	//
 
 ------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8--

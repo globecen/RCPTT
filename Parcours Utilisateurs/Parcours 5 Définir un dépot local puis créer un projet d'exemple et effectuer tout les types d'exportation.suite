@@ -1,0 +1,30 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: Parcours 5 Définir un dépot local puis créer un projet d'exemple et effectuer tout les types d'exportation
+Element-Type: testsuite
+Element-Version: 2.0
+Id: _PvChICJlEeq8fLxhrwTGIQ
+Manually-Ordered: true
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/20/19, 10:57 AM
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+L'utilisateur : 
+- Créer un nouveau dépot local
+- Créer un projet d'exemple biotech
+- Exporte la base de connnaissances du projet biotech
+- Exporte le projet biotech
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8
+Content-Type: text/testcase
+Entry-Name: testcase-items
+
+_y8qNoBEbEeqE8Mf0bEbk0A	//
+_RSq24CJAEeq8fLxhrwTGIQ	//
+_rHTkQBHGEeqoisrVvDeEOQ	//
+_Kd5Q4BD8EeqE8Mf0bEbk0A	//
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8--
