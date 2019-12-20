@@ -1,5 +1,6 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
+Contexts: _wgWyYCAFEeqNzuzastf2sA
 Element-Name: test
 Element-Type: testcase
 Element-Version: 3.0
@@ -8,43 +9,16 @@ Id: _UkHoYCCyEeqAcJTGuw2CmA
 Property-lb_MousePress: mouse-press -x 177 -y 73 -button button1
 Property-lb_MouseRelease: mouse-release -x 177 -y 77 -button button1
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/19/19, 2:02 PM
+Save-Time: 12/19/19, 4:46 PM
 Testcase-Type: ecl
 
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
 Content-Type: text/ecl
 Entry-Name: .content
 
-get-button "Nouveau (Ctrl+N)" | click
-with [get-window Nouveau] {
-    get-tree | select "Projet Agile Risk Manager"
-    get-button "Suivant >" | click
-}
-with [get-window "Projets Agile Risk Manager"] {
-    get-editbox -after [get-label "Nom du projet :"] | set-text Biotech
-    get-button "Suivant >" | click
-    with [get-section "Bases de connaissances" | get-tree] {
-        select "Bases additionnelles"
-        get-item -path "Bases additionnelles" | check
-        get-item -path "EBIOS Risk Manager" | check
-    }
-    get-button "Suivant >" | click
-    get-button | click
-    get-button -after [get-label X -after [get-label X]] | click
-    get-button -after [get-label X -after [get-label X 
-        -after [get-label "Être en conformité avec les référentiels de sécurité numérique"]]] | click
-    get-button -after [get-label X 
-        -after [get-label "Évaluer le niveau de menace de l'écosystème vis-à-vis de l'objet de l'étude"]] | click
-    get-button -after [get-label X -after [get-label X 
-        -after [get-label "Identifier et analyser les scénarios de haut niveau, intégrant l'écosystème"]]] | click
-    get-button -after [get-label X -after [get-label X -after [get-label X -after [get-label X 
-        -after [get-label "Réaliser une étude préliminaire de risque pour identifier les axes prioritaires d'amélioration de la sécurité"]]]]] 
-        | click
-    get-button -after [get-label X -after [get-label X -after [get-label X -after [get-label X -after [get-label X 
-        -after [get-label "Conduire une étude de risque complète et fine, par exemple sur un produit de sécurité ou en vue de l'homologation d'un système"]]]]]] 
-        | click
-    get-button -after [get-label X -after [get-label X 
-        -after [get-label "Orienter un audit de sécurité et notamment un test d'intrusion"]]] | click
-    get-button Terminer | click
+with [get-view $atelier1 | get-canvas | double-click]
+{
+   mouse-press -x 135 -y 490 -button button1
+   mouse-release -x 135 -y 490 -button button1
 }
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

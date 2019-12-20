@@ -1,0 +1,19 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: Parcours 6
+Element-Type: testsuite
+Element-Version: 2.0
+Id: _yBEYMCJrEeq11O5917ATQg
+Manually-Ordered: true
+Runtime-Version: 2.4.3.201909171500
+Save-Time: 12/19/19, 3:34 PM
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+L'utilisateur :
+- Créer un nouveau dépot local
+- Créer un projet d'exemple
+- 
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
