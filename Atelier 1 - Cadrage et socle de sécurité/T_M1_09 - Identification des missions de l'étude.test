@@ -13,9 +13,15 @@ Property-sect_IdentifierMission: Identifier les missions de l'objet de l'étude
 Property-tab_IdentificationMission: Identification des missions de l'objet étudié
 Property-wnd_MissionEtude: Missions de l'objet de l'étude
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/19/19, 11:21 AM
+Save-Time: 12/20/19, 1:04 PM
 Testcase-Type: ecl
 
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Vérifier que l'utilisateur peut ajouter une mission dans le tableau "Identification des missions de l'objet d'étude"
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
 Content-Type: text/ecl
 Entry-Name: .content

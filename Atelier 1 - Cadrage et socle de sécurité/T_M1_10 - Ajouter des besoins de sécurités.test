@@ -10,9 +10,15 @@ Property-NomBesionSecu2: Détournement d'usage d'un service
 Property-NomBesoinSecu1: Falsification ou modification d'une information
 Property-NomBesoinSecu3: Altération d'un processus
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/19/19, 11:59 AM
+Save-Time: 12/20/19, 1:05 PM
 Testcase-Type: ecl
 
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Vérifier que l'utilisateur peut ajouter des besoins de sécurités dans l'échelle de besoin de sécurité
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
 Content-Type: text/ecl
 Entry-Name: .content

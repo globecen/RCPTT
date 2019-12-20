@@ -11,9 +11,15 @@ Property-mod_CycleOperationnel: 3 ans
 Property-mod_ObjetEtude: Estimation d’un niveau de maturité faible en matière de sécurité du numérique.
 Property-mod_participant: Service informatique
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/19/19, 10:13 AM
+Save-Time: 12/20/19, 9:46 AM
 Testcase-Type: ecl
 
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Vérifier que l'utilisateur peut modifier un élément du cadre d'étude, ici nous modifions l'objectif de l'étude, le cycle opérationnel, et le nom d'un des participant de l'étude
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
 Content-Type: text/ecl
 Entry-Name: .content

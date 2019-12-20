@@ -15,9 +15,15 @@ Property-NomBS2: Serveurs bureautiques (internes)
 Property-NomBS3: Systèmes de production
 Property-NomBS4: Systèmes de production des antigènes
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/19/19, 3:34 PM
+Save-Time: 12/20/19, 11:20 AM
 Testcase-Type: ecl
 
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Vérifier que l'utilisateur peut ajouter des biens support au projet
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
 Content-Type: text/ecl
 Entry-Name: .content

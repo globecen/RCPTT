@@ -8,9 +8,15 @@ External-Reference:
 Id: _ahN7QCGqEeqTVt1sZyB3_w
 Property-NomCategorieBS: Serveurs bureautiques
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/19/19, 10:13 AM
+Save-Time: 12/20/19, 12:52 PM
 Testcase-Type: ecl
 
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Vérifier que l'utilisateur peut ajouter des catégories de bien support et modification de tableau de biens supports avec les catégories qu'il vient d'ajouter.
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
 Content-Type: text/ecl
 Entry-Name: .content

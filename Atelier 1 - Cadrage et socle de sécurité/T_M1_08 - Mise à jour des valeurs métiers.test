@@ -7,9 +7,15 @@ Element-Version: 3.0
 External-Reference: 
 Id: _115igCGsEeqTVt1sZyB3_w
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/19/19, 4:23 PM
+Save-Time: 12/20/19, 1:16 PM
 Testcase-Type: ecl
 
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Vérifier que l'utilisateur peut modifier la base des valeurs métiers, ici on rajoute les informations qu'il manquaient (biens supports) 
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
 Content-Type: text/ecl
 Entry-Name: .content
@@ -33,7 +39,7 @@ with [get-editor "Base de valeurs métier" | get-section "Contenu de la base de 
     key-type F2 -times 2
 }
 with [get-window "Biens supports"] {
-    with [get-section "Élément(s) disponible(s)"] {s
+    with [get-section "Élément(s) disponible(s)"] {
         get-editbox | set-text "entrer le texte du filtre"
         get-tree | select "Biens supports/Serveurs bureautiques (externes)"
     }

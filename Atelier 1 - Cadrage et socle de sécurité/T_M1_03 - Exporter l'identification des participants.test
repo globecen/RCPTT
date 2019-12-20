@@ -8,9 +8,15 @@ External-Reference:
 Id: _F8CsMCGYEeqTVt1sZyB3_w
 Property-tab_PlanningEtude: Planning des ateliers de l'étude
 Runtime-Version: 2.4.3.201909171500
-Save-Time: 12/19/19, 2:35 PM
+Save-Time: 12/20/19, 9:48 AM
 Testcase-Type: ecl
 
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Vérifier que l'utilisateur peut exporter le tableau des participants de l'étude et le planning des ateliers de l'étude.
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
 Content-Type: text/ecl
 Entry-Name: .content
